@@ -16,11 +16,44 @@ namespace WebForm_final.Controllers
             List<Brand> objbrands = _db.Brands.ToList();
             return View(objbrands);
         }
-        public IActionResult Create()
-        {
-            return View();
-        }
+
+		//Edit method
+	
+		public IActionResult Edit(int? id)
+		{
+			if (id == null || id == 0)
+			{
+				return NotFound();
+			}
+			Brand? brandFromDb = _db.Brands.FirstOrDefault(c => c.id == id);
+			if (brandFromDb == null)
+			{
+				return NotFound();
+			}
+			return View(brandFromDb);
+		}
         [HttpPost]
+		public IActionResult Edit(Brand objbrand)
+		{
+		
+			if (ModelState.IsValid)
+			{
+				_db.Brands.Update(objbrand);
+				_db.SaveChanges();
+				return RedirectToAction("Index");
+			}
+
+			return View();
+		}
+
+		// Create method
+
+		public IActionResult Create()
+		{
+			return View();
+		}
+
+		[HttpPost]
         public IActionResult Create(Brand objbrand)
         {
             //if(objbrand.name == null )
@@ -30,12 +63,36 @@ namespace WebForm_final.Controllers
             //}
             if(ModelState.IsValid)
             {
-                _db.SaveChanges();
                 _db.Brands.Add(objbrand);
-                return RedirectToAction("Index");
+				_db.SaveChanges();
+				return RedirectToAction("Index");
             }
 
             return View();
         }
-    }
+
+		// Delete
+
+		public IActionResult Delete(int? id)
+		{
+			if (id == null || id == 0)
+			{
+				return NotFound();
+			}
+			Brand? brandFromDb = _db.Brands.FirstOrDefault(c => c.id == id);
+			if (brandFromDb == null)
+			{
+				return NotFound();
+			}
+			return View(brandFromDb);
+		}
+
+		[HttpPost]
+		public IActionResult Delete123(Brand objbrand)
+		{
+			_db.Brands.Remove(objbrand);
+			_db.SaveChanges();
+			return RedirectToAction("index");
+		}
+	}
 }
