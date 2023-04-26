@@ -40,6 +40,7 @@ namespace WebForm_final.Controllers
 			{
 				_db.Brands.Update(objbrand);
 				_db.SaveChanges();
+				TempData["notification"] = "Edit brand successfully";
 				return RedirectToAction("Index");
 			}
 
@@ -65,6 +66,7 @@ namespace WebForm_final.Controllers
             {
                 _db.Brands.Add(objbrand);
 				_db.SaveChanges();
+				TempData["notification"] = "Create brand successfully";
 				return RedirectToAction("Index");
             }
 
@@ -88,10 +90,11 @@ namespace WebForm_final.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Delete123(Brand objbrand)
+		public IActionResult Delete (Brand objbrand)
 		{
 			_db.Brands.Remove(objbrand);
 			_db.SaveChanges();
+			TempData["notification"] = "Delete brand successfully";
 			return RedirectToAction("index");
 		}
 	}
