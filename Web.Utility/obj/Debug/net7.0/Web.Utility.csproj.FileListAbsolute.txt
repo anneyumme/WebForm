@@ -1,0 +1,12 @@
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\bin\Debug\net7.0\Web.Utility.deps.json
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\bin\Debug\net7.0\Web.Utility.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\bin\Debug\net7.0\Web.Utility.pdb
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\Web.Utility.csproj.AssemblyReference.cache
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\Web.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\Web.Utility.AssemblyInfoInputs.cache
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\Web.Utility.AssemblyInfo.cs
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\Web.Utility.csproj.CoreCompileInputs.cache
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\Web.Utility.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\refint\Web.Utility.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\Web.Utility.pdb
+C:\Users\ninhd\Desktop\Final Essay\WebForm\Web.Utility\obj\Debug\net7.0\ref\Web.Utility.dll

@@ -3724,6 +3724,42 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Web.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
+          "Web.Models": "1.0.0",
+          "Web.Utility": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Web.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Web.DataAccess.dll": {}
+        }
+      },
+      "Web.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Web.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Web.Models.dll": {}
+        }
+      },
+      "Web.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Web.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Web.Utility.dll": {}
+        }
       }
     }
   },
@@ -10811,6 +10847,21 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Web.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Web.DataAcess/Web.DataAccess.csproj",
+      "msbuildProject": "../Web.DataAcess/Web.DataAccess.csproj"
+    },
+    "Web.Models/1.0.0": {
+      "type": "project",
+      "path": "../Web.Models/Web.Models.csproj",
+      "msbuildProject": "../Web.Models/Web.Models.csproj"
+    },
+    "Web.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Web.Utility/Web.Utility.csproj",
+      "msbuildProject": "../Web.Utility/Web.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10819,7 +10870,10 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.6",
-      "System.Data.SqlClient >= 4.8.5"
+      "System.Data.SqlClient >= 4.8.5",
+      "Web.DataAccess >= 1.0.0",
+      "Web.Models >= 1.0.0",
+      "Web.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10854,7 +10908,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\Web.DataAcess\\Web.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\Web.DataAcess\\Web.DataAccess.csproj"
+            },
+            "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\Web.Models\\Web.Models.csproj": {
+              "projectPath": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\Web.Models\\Web.Models.csproj"
+            },
+            "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\Web.Utility\\Web.Utility.csproj": {
+              "projectPath": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\Web.Utility\\Web.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

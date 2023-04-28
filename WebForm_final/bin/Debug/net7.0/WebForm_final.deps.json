@@ -12,7 +12,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.6",
-          "System.Data.SqlClient": "4.8.5"
+          "System.Data.SqlClient": "4.8.5",
+          "Web.DataAccess": "1.0.0",
+          "Web.Models": "1.0.0",
+          "Web.Utility": "1.0.0"
         },
         "runtime": {
           "WebForm_final.dll": {}
@@ -2334,6 +2337,27 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "Web.DataAccess/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
+          "Web.Models": "1.0.0",
+          "Web.Utility": "1.0.0"
+        },
+        "runtime": {
+          "Web.DataAccess.dll": {}
+        }
+      },
+      "Web.Models/1.0.0": {
+        "runtime": {
+          "Web.Models.dll": {}
+        }
+      },
+      "Web.Utility/1.0.0": {
+        "runtime": {
+          "Web.Utility.dll": {}
+        }
       }
     }
   },
@@ -3637,6 +3661,21 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Web.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Web.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Web.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

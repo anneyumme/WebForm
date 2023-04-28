@@ -279,3 +279,9 @@ C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\runtim
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.DataAccess.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.Models.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.Utility.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.DataAccess.pdb
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.Models.pdb
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.Utility.pdb
