@@ -1,0 +1,34 @@
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\Log in.exe.config
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\Log in.pdb
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.AssemblyReference.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.SuggestedBindingRedirects.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.Form1.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.Properties.Resources.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.GenerateResource.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.CoreCompileInputs.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.pdb
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.GoodsReceived.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.Menu.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.GoodsDelivery.resources
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\BouncyCastle.Crypto.dll
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\itextsharp.dll
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\itextsharp.xml
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.CopyComplete
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Log in.exe.config
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Log in.pdb
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\itextsharp.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.AssemblyReference.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.SuggestedBindingRedirects.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.Form1.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.GoodsDelivery.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.GoodsReceived.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.Menu.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.Properties.Resources.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.GenerateResource.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.CoreCompileInputs.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.CopyComplete
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.pdb
