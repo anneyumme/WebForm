@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8lImd4ygdLKFL6KcWk3ly33xopG/ZtrgVJycXQMSbAw=",
+  "Hash": "/AgNGGJFfH8UQYzSL6+qqGd3ASd01dsIay09vEd1AuM=",
   "Source": "WebForm_final",
   "BasePath": "_content/WebForm_final",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\5bb37a46-47a4-4087-b125-cea702dbe925.jpg",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "Images/Product/5bb37a46-47a4-4087-b125-cea702dbe925.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Product\\5bb37a46-47a4-4087-b125-cea702dbe925.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Product.js",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "js/Product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Product.js"
     },
     {
       "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\site.js",

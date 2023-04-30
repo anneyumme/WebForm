@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Web.Models;
 using Web.DataAccess.Data;
-using Web.DataAccess.Repository;
+using Web.DataAccess.Repository.Interface;
 
 namespace WebForm_final.Areas.Admin.Controllers
 {

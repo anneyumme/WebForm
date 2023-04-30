@@ -285,3 +285,6 @@ C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.Ut
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.DataAccess.pdb
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.Models.pdb
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Web.Utility.pdb
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\obj\Debug\net7.0\WebForm_final.MvcApplicationPartsAssemblyInfo.cs

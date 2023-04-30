@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\WebForm_final.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\5bb37a46-47a4-4087-b125-cea702dbe925.jpg",
+      "PackagePath": "staticwebassets\\Images\\Product\\5bb37a46-47a4-4087-b125-cea702dbe925.jpg"
+    },
+    {
       "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Product.js",
+      "PackagePath": "staticwebassets\\js\\Product.js"
     },
     {
       "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\site.js",

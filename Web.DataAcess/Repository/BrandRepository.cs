@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Web.DataAccess.Data;
+using Web.DataAccess.Repository.Interface;
 using Web.Models;
 
 namespace Web.DataAccess.Repository
 {
-	public class BrandRepository : Repository<Brand>, IBrandRepository
+    public class BrandRepository : Repository<Brand>, IBrandRepository
 	{
 		private readonly ApplicationDbContext _db;
         public BrandRepository( ApplicationDbContext db) : base(db) 
