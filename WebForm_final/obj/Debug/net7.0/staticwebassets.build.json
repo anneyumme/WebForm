@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/AgNGGJFfH8UQYzSL6+qqGd3ASd01dsIay09vEd1AuM=",
+  "Hash": "Mlh9DsEylQiKmtHfgpQ+h/vDkoFnBFMu6xGYWpbV/SQ=",
   "Source": "WebForm_final",
   "BasePath": "_content/WebForm_final",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\5bb37a46-47a4-4087-b125-cea702dbe925.jpg",
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\d41e2953-0235-4359-8fba-9491ce51ec7f.jpg",
       "SourceId": "WebForm_final",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
       "BasePath": "_content/WebForm_final",
-      "RelativePath": "Images/Product/5bb37a46-47a4-4087-b125-cea702dbe925.jpg",
+      "RelativePath": "Images/Product/d41e2953-0235-4359-8fba-9491ce51ec7f.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Product\\5bb37a46-47a4-4087-b125-cea702dbe925.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\Product\\d41e2953-0235-4359-8fba-9491ce51ec7f.jpg"
     },
     {
       "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Product.js",

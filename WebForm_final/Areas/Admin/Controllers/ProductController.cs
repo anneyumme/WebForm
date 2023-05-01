@@ -59,7 +59,7 @@ namespace WebForm_final.Areas.Admin.Controllers
 				{
 					string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
 					string imagePath = Path.Combine(RootPath, @"Images/Product");
-					if(!string.IsNullOrEmpty(productVM.Product.imageUrl))
+					if (!string.IsNullOrEmpty(productVM.Product.imageUrl))
 					{
 						string imagePathOld = Path.Combine(RootPath, productVM.Product.imageUrl.TrimStart('\\'));
 						if (System.IO.File.Exists(imagePathOld))
@@ -92,7 +92,7 @@ namespace WebForm_final.Areas.Admin.Controllers
 			});
 			//ViewBag.BrandList = brandList;
 			ProductViewModel productVM = new ProductViewModel();
-			productVM.BrandList= brandList;
+			productVM.BrandList = brandList;
 			productVM.Product = new Product();
 
 			return View(productVM);
@@ -106,20 +106,20 @@ namespace WebForm_final.Areas.Admin.Controllers
 			//    ModelState.AddModelError("name", "Brand Name is required");
 			//    return View();
 			//}
-			 // Create a ViewBag property called "BrandList" and set its value from the "brandList" object
-			if (ModelState.IsValid) 			
+			// Create a ViewBag property called "BrandList" and set its value from the "brandList" object
+			if (ModelState.IsValid)
 			{
 
 				string RootPath = _WebHostEnvironment.WebRootPath;
-				if(file != null)
+				if (file != null)
 				{
-					string fileName= Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-					string imagePath= Path.Combine(RootPath, @"Images/Product");
+					string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+					string imagePath = Path.Combine(RootPath, @"Images/Product");
 					using (var filestream = new FileStream(Path.Combine(imagePath, fileName), FileMode.Create))
 					{
 						file.CopyTo(filestream);
 					}
-					productVM.Product.imageUrl= @"Images/Product/" + fileName;
+					productVM.Product.imageUrl = @"Images/Product/" + fileName;
 				}
 
 				_UnitOfWork.Product.add(productVM.Product);
@@ -142,28 +142,28 @@ namespace WebForm_final.Areas.Admin.Controllers
 
 		// Delete
 
-		public IActionResult Delete(int? id)
-		{
-			if (id == null || id == 0)
-			{
-				return NotFound();
-			}
-			Product? brandFromDb = _UnitOfWork.Product.Get(c => c.id == id);
-			if (brandFromDb == null)
-			{
-				return NotFound();
-			}
-			return View(brandFromDb);
-		}
+		//public IActionResult Delete(int? id)
+		//{
+		//	if (id == null || id == 0)
+		//	{
+		//		return NotFound();
+		//	}
+		//	Product? brandFromDb = _UnitOfWork.Product.Get(c => c.id == id);
+		//	if (brandFromDb == null)
+		//	{
+		//		return NotFound();
+		//	}
+		//	return View(brandFromDb);
+		//}
 
-		[HttpPost]
-		public IActionResult Delete(Product objbrand)
-		{	
-			_UnitOfWork.Product.remove(objbrand);
-			_UnitOfWork.Product.save();
-			TempData["notification"] = "Delete brand successfully";
-			return RedirectToAction("index");
-		}
+		//[HttpPost]
+		//public IActionResult Delete(Product objbrand)
+		//{	
+		//	_UnitOfWork.Product.remove(objbrand);
+		//	_UnitOfWork.Product.save();
+		//	TempData["notification"] = "Delete brand successfully";
+		//	return RedirectToAction("index");
+		//}
 
 		#region API CALLS
 		[HttpGet]
@@ -172,6 +172,34 @@ namespace WebForm_final.Areas.Admin.Controllers
 			var allObj = _UnitOfWork.Product.GetAll(includeProperties: "brand").ToList();
 			return Json(new { data = allObj });
 		}
-		#endregion
+
+		[HttpDelete]
+		public IActionResult Delete(int? id)
+		{
+			if (id == null || id == 0)
+			{
+				return NotFound();
+			}
+			Product? ProductFromDb = _UnitOfWork.Product.Get(c => c.id == id);
+			if (ProductFromDb == null)
+			{
+				return NotFound();
+			}
+
+			if (!string.IsNullOrEmpty(ProductFromDb.imageUrl))
+			{
+				string imagePathOld = Path.Combine(_WebHostEnvironment.WebRootPath, ProductFromDb.imageUrl.TrimStart('\\'));
+				if (System.IO.File.Exists(imagePathOld))
+				{
+					System.IO.File.Delete(imagePathOld);
+				}
+				_UnitOfWork.Product.remove(ProductFromDb);
+				_UnitOfWork.Product.save();
+			}
+
+			return Json(new {success= true,  message= "Delete Successfuly"});
+
+			#endregion
+		}
 	}
 }

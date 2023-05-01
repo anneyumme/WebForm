@@ -2,55 +2,61 @@
 
 <form method="post" enctype="multipart/form-data">
 	<input type="hidden" asp-for="Product.id" />
-	<input type="hidden" asp-for="Product.imageUrl"/>
-		<div class="row pb-2">
-			<h2 class="text-primary text-center">Edit Product</h2>
-		</div>
-		<div class="mb-3">
-			<label asp-for="Product.name"></label>
-			<input asp-for="Product.name" class="form-control" />
-			<span asp-validation-for="Product.name" class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<label asp-for="Product.model"></label>
-			<input asp-for="Product.model" class="form-control" />
-			<span asp-validation-for="Product.model" class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<label asp-for="Product.price"></label>
-			<input asp-for="Product.price" class="form-control" />
-			<span asp-validation-for="Product.price" class="text-danger"></span>
-		</div>
-		<div class="mb-3">
-			<span asp-validation-for="Product.description" class="text-danger"></span>
-			<label asp-for="Product.description"></label>
-			<textarea asp-for="Product.description" class="form-control"> </textarea>
-		</div>
-		<div class="mb-3">
-			<img src="@Url.Content(@Model.Product.imageUrl)" style="height: 370px; width: 370px" alt="Loading" class="img-fluid" />
-		</div>
-		<div class="mb-3">
-			<label asp-for="Product.imageUrl" class="form-label"></label>
-			<input name="file" class="form-control" type="file">
-		</div>
-		<div class="mb-3">
-			<label asp-for="Product.brandId"></label>
-			<select asp-for="Product.brandId" asp-items="@Model.BrandList" class="form-control">
-				<option disabled selected>Select Brand</option>
-			</select>
-			<span asp-validation-for="Product.brandId" class="text-danger"></span>
-		</div>
+	<input type="hidden" asp-for="Product.imageUrl" />
+	<div class="row pb-2">
+		<h2 class="text-primary text-center">Edit Product</h2>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.name"></label>
+		<input asp-for="Product.name" class="form-control" />
+		<span asp-validation-for="Product.name" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.model"></label>
+		<input asp-for="Product.model" class="form-control" />
+		<span asp-validation-for="Product.model" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.price"></label>
+		<input asp-for="Product.price" class="form-control" />
+		<span asp-validation-for="Product.price" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.description"></label>
+		<textarea asp-for="Product.description" class="form-control"> </textarea>
+		<span asp-validation-for="Product.description" class="text-danger"></span>
 
-		<div class="row">
-			<div class="col-6 col-md-3">
-				<button type="submit" class="btn btn-primary form-control">Update</button>
-			</div>
-			<div class="col-6 col-md-3">
-				<a asp-controller="Product" asp-action="Index" class="btn btn-secondary form-control border">
-					Back to List
-				</a>
-			</div>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.year"></label>
+		<input asp-for="Product.year" class="form-control" />
+		<span asp-validation-for="Product.year" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<img src="@Url.Content(@Model.Product.imageUrl)" style="height: 370px; width: 370px" alt="Loading" class="img-fluid" />
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.imageUrl" class="form-label"></label>
+		<input name="file" class="form-control" type="file">
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.brandId"></label>
+		<select asp-for="Product.brandId" asp-items="@Model.BrandList" class="form-control">
+			<option disabled selected>Select Brand</option>
+		</select>
+		<span asp-validation-for="Product.brandId" class="text-danger"></span>
+	</div>
+
+	<div class="row">
+		<div class="col-6 col-md-3">
+			<button type="submit" class="btn btn-primary form-control">Update</button>
 		</div>
+		<div class="col-6 col-md-3">
+			<a asp-controller="Product" asp-action="Index" class="btn btn-secondary form-control border">
+				Back to List
+			</a>
+		</div>
+	</div>
 	</div>
 </form>
 

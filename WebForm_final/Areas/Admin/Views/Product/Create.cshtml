@@ -24,10 +24,19 @@
 		<div class="mb-3">
 			<label asp-for="Product.description"></label>
 			<textarea asp-for="Product.description" class="form-control"> </textarea>
+			<span asp-validation-for="Product.description" class="text-danger"></span>
+
+		</div>
+		<div class="mb-3">
+			<label asp-for="Product.year"></label>
+			<input asp-for="Product.year" class="form-control" />
+			<span asp-validation-for="Product.year" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
 			<label asp-for="Product.imageUrl" class="form-label"></label>
 			<input name="file" class="form-control" type="file">
+			<span asp-validation-for="Product.imageUrl" class="text-danger"></span>
+
 		</div>
 		<div class="mb-3">
 			<label asp-for="Product.brandId"></label>
@@ -64,7 +73,7 @@
 			]
 		});
 	</script>
-	@{
+	@*@{
 	<partical name="_ValidationScriptsPartial"/>
-	}
+	}*@
 }

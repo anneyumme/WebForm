@@ -74,6 +74,9 @@ namespace Web.DataAcess.Migrations
                     b.Property<double>("price")
                         .HasColumnType("float");
 
+                    b.Property<double>("year")
+                        .HasColumnType("float");
+
                     b.HasKey("id");
 
                     b.HasIndex("brandId");

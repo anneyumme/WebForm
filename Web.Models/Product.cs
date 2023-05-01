@@ -22,6 +22,7 @@ namespace Web.Models
 		public string description { get; set; }
 		[Display(Name = "Price")]
 		[Range(0, 1000000)]
+		[Required]
 		public double price { get; set; }
 		[Display(Name = "Phone Name")]
 		public string name { get; set; }
@@ -31,9 +32,12 @@ namespace Web.Models
 		[ForeignKey("brandId")]
 		[ValidateNever]
 		public Brand brand { get; set; }
-		[Required]
 		[ValidateNever]
 		[Display(Name = "Image File Upload")]
+		[Required]
 		public string imageUrl { get; set; }
+		[Required]
+		[Display(Name = "Year of production")]
+		public double year { get; set; }
 	}
 }
