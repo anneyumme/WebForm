@@ -12,23 +12,36 @@
 		</div>
 		<div class="mb-3">
 			<label asp-for="description"></label>
-			<input asp-for="description" class="form-control" />
+			<textarea asp-for="description" class="form-control"> </textarea>
 			<span asp-validation-for="description" class="text-danger"></span>
+
 		</div>
 		<div class="row">
 			<div class="col-6 col-md-3">
-				<button type="submit" class="btn btn-primary form-control">Update</button>
+				<button type="submit" class="btn btn-primary form-control" style="border-radius:8px">Update</button>
 			</div>
 			<div class="col-6 col-md-3">
-				<a asp-controller="Brand" asp-action="Index" class="btn btn-secondary form-control border">
+				<a asp-controller="Brand" asp-action="Index" class="btn btn-secondary form-control border" style="border-radius:8px">
 					Back to List
 				</a>
 			</div>
 		</div>
 	</div>
 </form>
-
 @section Scripts{
+	<script>
+		tinymce.init({
+			selector: 'textarea',
+			plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+			toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap ',
+			tinycomments_mode: 'embedded',
+			tinycomments_author: 'Author name',
+			mergetags_list: [
+				{ value: 'First.Name', title: 'First Name' },
+				{ value: 'Email', title: 'Email' },
+			]
+		});
+	</script>
 	@{
 		<partical name="_ValidationScriptsPartial" />
 	}

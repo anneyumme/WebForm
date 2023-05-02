@@ -2,10 +2,13 @@
 using Web.Models;
 using Web.DataAccess.Data;
 using Web.DataAccess.Repository.Interface;
+using Microsoft.AspNetCore.Authorization;
+using Web.Utility;
 
 namespace WebForm_final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = Role.Role_user_admin)]
     public class BrandController : Controller
     {
         private readonly IUnitOfWork _UnitOfWork;
@@ -77,29 +80,48 @@ namespace WebForm_final.Areas.Admin.Controllers
 
         // Delete
 
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Brand? brandFromDb = _UnitOfWork.Brand.Get(c => c.id == id);
-            if (brandFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(brandFromDb);
-        }
+        //public IActionResult Delete(int? id)
+        //{
+        //    if (id == null || id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    Brand? brandFromDb = _UnitOfWork.Brand.Get(c => c.id == id);
+        //    if (brandFromDb == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(brandFromDb);
+        //}
 
-        [HttpPost]
-        public IActionResult Delete(Brand objbrand)
+        //[HttpPost]
+        //public IActionResult Delete(Brand objbrand)
+        //{
+        //    _UnitOfWork.Brand.remove(objbrand);
+        //    _UnitOfWork.Brand.save();
+        //    TempData["notification"] = "Delete brand successfully";
+        //    return RedirectToAction("index");
+        //}
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            _UnitOfWork.Brand.remove(objbrand);
+            return Json(new { data = _UnitOfWork.Brand.GetAll() });
+        }
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var objFromDb = _UnitOfWork.Brand.Get(c => c.id == id);
+            if (objFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            _UnitOfWork.Brand.remove(objFromDb);
             _UnitOfWork.Brand.save();
-            TempData["notification"] = "Delete brand successfully";
-            return RedirectToAction("index");
+            return Json(new { success = true, message = "Delete successful" });
         }
 
+        #endregion
 
 
     }

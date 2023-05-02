@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.AccessControl;
 using Web.DataAccess.Repository.Interface;
 using Web.DataAccess.ViewModel;
 using Web.Models;
+using Web.Utility;
 
 namespace WebForm_final.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+	[Authorize(Roles = Role.Role_user_admin)]
 	public class ProductController : Controller
 	{
 		private readonly IUnitOfWork _UnitOfWork;
