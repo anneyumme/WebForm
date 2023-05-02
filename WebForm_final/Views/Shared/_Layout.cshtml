@@ -12,11 +12,7 @@
 	<link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 	
 </head>
-<style>
-	a:hover {
-		color: white;
-	}
-</style>
+
 <body>
 	<header>
 		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
@@ -41,6 +37,11 @@
 								</div>
 							</li>
 						}
+						<li class="nav-item">
+							<a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
+								<i class="bi bi-cart3"></i> (0)
+							</a>
+						</li>
 					</ul>
 					<partial name="_LoginPartial" />
 				</div>

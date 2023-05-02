@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Web.DataAccess.Data;
 using Web.DataAccess.Repository.Interface;
+using Web.Models;
 
 namespace Web.DataAccess.Repository
 {
@@ -13,13 +14,17 @@ namespace Web.DataAccess.Repository
 		private readonly ApplicationDbContext _db;
 		public IBrandRepository Brand { get; }
 		public IProductRepository Product { get; }
+		public IShoppingCartRepository ShoppingCart { get; }
+		public IUserApplication userApplication { get; }
 
 		public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
-			Brand = new BrandRepository(_db);     //  setting the value of the "Brand" property to a new
-			Product = new ProductRepository(_db);//  instance of the "BrandRepository" class, we can now use the methods and
-											     //  properties defined in the "IBrandRepository" interface
+			userApplication= new UserApplicationRepository(_db);
+			Brand = new BrandRepository(_db);               //  setting the value of the "Brand" property to a new
+			Product = new ProductRepository(_db);
+			ShoppingCart = new ShoppingCartRepository(_db); //  instance of the "BrandRepository" class, we can now use the methods and
+											                //  properties defined in the "IBrandRepository" interface
 		}
 		public void update()
 		{

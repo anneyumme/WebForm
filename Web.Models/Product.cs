@@ -21,7 +21,6 @@ namespace Web.Models
 		[Display(Name = "Description")]
 		public string description { get; set; }
 		[Display(Name = "Price")]
-		[Range(0, 1000000)]
 		[Required]
 		public double price { get; set; }
 		[Display(Name = "Phone Name")]
@@ -34,10 +33,15 @@ namespace Web.Models
 		public Brand brand { get; set; }
 		[ValidateNever]
 		[Display(Name = "Image File Upload")]
-		[Required]
 		public string imageUrl { get; set; }
+		[Display(Name = "Year of Production")]
 		[Required]
-		[Display(Name = "Year of production")]
 		public double year { get; set; }
+		[Display(Name = "Price for quanity 50")]
+		[Required]
+		public double price50  { get; set; }
+		[Display(Name = "Price for quanity 100")]
+		[Required]
+		public double price100 { get; set; }
 	}
 }

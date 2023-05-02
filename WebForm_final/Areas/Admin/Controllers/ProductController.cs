@@ -47,6 +47,7 @@ namespace WebForm_final.Areas.Admin.Controllers
 				Value = i.id.ToString()   //Select() method to transform each brand object into a new SelectListItem object
 			});
 
+
 			ProductViewModel productVM = new ProductViewModel();
 			productVM.BrandList = brandList;
 			productVM.Product = brandFromDb;
@@ -122,7 +123,7 @@ namespace WebForm_final.Areas.Admin.Controllers
 					{
 						file.CopyTo(filestream);
 					}
-					productVM.Product.imageUrl = @"Images/Product/" + fileName;
+					productVM.Product.imageUrl = @"/Images/Product/" + fileName;
 				}
 
 				_UnitOfWork.Product.add(productVM.Product);

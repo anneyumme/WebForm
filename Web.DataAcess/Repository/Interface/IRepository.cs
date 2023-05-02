@@ -12,7 +12,7 @@ namespace Web.DataAccess.Repository.Interface
         T Get(Expression<Func<T, bool>> filter, string? includeProperties = null);
         void add(T entity);
         void remove(T entity);
-        IEnumerable<T> GetAll(string? includeProperties = null);
+        IEnumerable<T> GetAll(Expression<Func<T, bool>> ? filter= null, string? includeProperties = null);
         void removeRange(IEnumerable<T> entity);
     }
 }

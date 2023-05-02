@@ -9,7 +9,8 @@ a.navbar-brand[b-1c0w76tks6] {
 }
 
 a[b-1c0w76tks6] {
-  color: gray;
+    color: gray;
+    border-radius: 8px
 }
 
 .btn-primary[b-1c0w76tks6] {

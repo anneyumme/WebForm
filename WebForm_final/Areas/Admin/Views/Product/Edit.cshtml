@@ -8,51 +8,62 @@
 	</div>
 	<div class="mb-3">
 		<label asp-for="Product.name"></label>
-		<input asp-for="Product.name" class="form-control" />
+		<input asp-for="Product.name" style="border-radius: 8px" class="form-control" />
 		<span asp-validation-for="Product.name" class="text-danger"></span>
 	</div>
 	<div class="mb-3">
 		<label asp-for="Product.model"></label>
-		<input asp-for="Product.model" class="form-control" />
+		<input asp-for="Product.model" style="border-radius: 8px" class="form-control" />
 		<span asp-validation-for="Product.model" class="text-danger"></span>
 	</div>
 	<div class="mb-3">
 		<label asp-for="Product.price"></label>
-		<input asp-for="Product.price" class="form-control" />
+		<input onkeyup="formatCurrency(this)" style="border-radius: 8px" asp-for="Product.price" class="form-control" />
 		<span asp-validation-for="Product.price" class="text-danger"></span>
 	</div>
 	<div class="mb-3">
+		<label asp-for="Product.price50"></label>
+		<input onkeyup="formatCurrency(this)" style="border-radius: 8px" asp-for="Product.price50" class="form-control" />
+		<span asp-validation-for="Product.price50" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Product.price100"></label>
+		<input onkeyup="formatCurrency(this)" style="border-radius: 8px" asp-for="Product.price100" class="form-control" />
+		<span asp-validation-for="Product.price100" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
 		<label asp-for="Product.description"></label>
-		<textarea asp-for="Product.description" class="form-control"> </textarea>
+		<textarea asp-for="Product.description" style="border-radius: 8px" class="form-control"> </textarea>
 		<span asp-validation-for="Product.description" class="text-danger"></span>
 
 	</div>
 	<div class="mb-3">
 		<label asp-for="Product.year"></label>
-		<input asp-for="Product.year" class="form-control" />
+		<input asp-for="Product.year" style="border-radius: 8px" class="form-control" />
 		<span asp-validation-for="Product.year" class="text-danger"></span>
 	</div>
-	<div class="mb-3">
-		<img src="@Url.Content(@Model.Product.imageUrl)" style="height: 370px; width: 370px" alt="Loading" class="img-fluid" />
+@*	//@Url.Content(@Model.Product.imageUrl)
+*@	<div class="mb-3">
+		<img src="@Model.Product.imageUrl" style="height: 370px; width: 370px" alt="Loading" class="img-fluid" />
 	</div>
 	<div class="mb-3">
 		<label asp-for="Product.imageUrl" class="form-label"></label>
-		<input name="file" class="form-control" type="file">
+		<input name="file" style="border-radius: 8px" class="form-control" type="file">
 	</div>
 	<div class="mb-3">
 		<label asp-for="Product.brandId"></label>
-		<select asp-for="Product.brandId" asp-items="@Model.BrandList" class="form-control">
+		<select asp-for="Product.brandId" style="border-radius: 8px" asp-items="@Model.BrandList" class="form-control">
 			<option disabled selected>Select Brand</option>
 		</select>
-		<span asp-validation-for="Product.brandId" class="text-danger"></span>
+		<span asp-validation-for="Product.brandId" class="t	ext-danger"></span>
 	</div>
 
 	<div class="row">
 		<div class="col-6 col-md-3">
-			<button type="submit" class="btn btn-primary form-control">Update</button>
+			<button type="submit" style="border-radius: 8px" class="btn btn-primary form-control">Update</button>
 		</div>
 		<div class="col-6 col-md-3">
-			<a asp-controller="Product" asp-action="Index" class="btn btn-secondary form-control border">
+			<a asp-controller="Product" asp-action="Index" style="border-radius: 8px" class="btn btn-secondary form-control border">
 				Back to List
 			</a>
 		</div>
@@ -73,6 +84,13 @@
 				{ value: 'Email', title: 'Email' },
 			]
 		});
+	</script>
+	<script>
+		function formatCurrency(inputField) {
+			let value = inputField.value.replace(/[^\d]/g, '');
+			value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+			inputField.value = value;
+		}
 	</script>
 	@{
 		<partical name="_ValidationScriptsPartial" />
