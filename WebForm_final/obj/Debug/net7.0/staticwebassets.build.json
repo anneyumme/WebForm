@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zl4+1imS1yVMnrl4AovJqLzrbvmc+sP8eEOIuR/Hd98=",
+  "Hash": "3TxnfSzY4PK87Gyrs4bj647iQscavHwL/R//MLMXlLI=",
   "Source": "WebForm_final",
   "BasePath": "_content/WebForm_final",
   "Mode": "Default",
@@ -1122,6 +1122,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\Product\\5704c22b-dc82-459f-bc7c-27d5529fe2eb.jpg"
     },
     {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\6ad82472-c685-4173-be7d-57ca0f4f9dd1.jpg",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "Images/Product/6ad82472-c685-4173-be7d-57ca0f4f9dd1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Product\\6ad82472-c685-4173-be7d-57ca0f4f9dd1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\a1d93498-786b-44af-82bb-67f37ca5d27f.jpg",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "Images/Product/a1d93498-786b-44af-82bb-67f37ca5d27f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Product\\a1d93498-786b-44af-82bb-67f37ca5d27f.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\d41e2953-0235-4359-8fba-9491ce51ec7f.jpg",
       "SourceId": "WebForm_final",
       "SourceType": "Discovered",
@@ -1154,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Brand.js"
+    },
+    {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Order.js",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "js/Order.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Order.js"
     },
     {
       "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Product.js",

@@ -16,9 +16,32 @@
                 <label asp-for="Username" class="form-label"></label>
             </div>
             <div class="form-floating mb-3">
+                <input asp-for="Input.Fullname" style="border-radius:8px" class="form-control" placeholder="Please choose your Full Name." />
+                <label asp-for="Input.Fullname" class="form-label"></label>
+            </div>
+            <div class="form-floating mb-3">
                 <input asp-for="Input.PhoneNumber" style="border-radius:8px" class="form-control" placeholder="Please enter your phone number." />
                 <label asp-for="Input.PhoneNumber" class="form-label"></label>
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.StreetAdress" style="border-radius:8px" class="form-control" placeholder="Please enter your phone number." />
+                <label asp-for="Input.StreetAdress" class="form-label"></label>
+                <span asp-validation-for="Input.StreetAdress" class="text-danger"></span>
+
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.City" style="border-radius:8px" class="form-control" placeholder="Please enter your phone number." />
+                <label asp-for="Input.City" class="form-label"></label>
+                <span asp-validation-for="Input.City" class="text-danger"></span>
+
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Province" style="border-radius:8px" class="form-control" placeholder="Please enter your phone number." />
+                <label asp-for="Input.Province" class="form-label"></label>
+                <span asp-validation-for="Input.Province" class="text-danger"></span>
+
             </div>
             <button id="update-profile-button" type="submit" class="w-100 btn btn-primary" style="border-radius:8px" >Save</button>
         </form>

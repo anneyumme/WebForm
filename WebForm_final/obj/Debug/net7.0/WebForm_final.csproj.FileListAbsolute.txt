@@ -296,3 +296,4 @@ C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Micros
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\ninhd\Desktop\Final Essay\WebForm\WebForm_final\bin\Debug\net7.0\Stripe.net.dll

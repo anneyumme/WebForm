@@ -28,18 +28,18 @@ namespace WebForm_final.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<UserApplication> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
+        private readonly UserManager<UserApplication> _userManager;
+        private readonly IUserStore<UserApplication> _userStore;
+        private readonly IUserEmailStore<UserApplication> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            IUserStore<IdentityUser> userStore,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<UserApplication> userManager,
+            IUserStore<UserApplication> userStore,
+            SignInManager<UserApplication> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
             RoleManager<IdentityRole> roleManager)
@@ -118,11 +118,11 @@ namespace WebForm_final.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if(!_roleManager.RoleExistsAsync(Role.Role_user_customer).GetAwaiter().GetResult()) 
+            if(!_roleManager.RoleExistsAsync(Global.Role_user_customer).GetAwaiter().GetResult()) 
             {
-                _roleManager.CreateAsync(new IdentityRole(Role.Role_user_customer)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(Role.Role_user_admin)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(Role.Role_user_employee)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(Global.Role_user_customer)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(Global.Role_user_admin)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(Global.Role_user_employee)).GetAwaiter().GetResult();
 
             }
             Input = new()
@@ -160,7 +160,7 @@ namespace WebForm_final.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _userManager.AddToRoleAsync(user, Role.Role_user_customer);
+                        await _userManager.AddToRoleAsync(user, Global.Role_user_customer);
                     }
 
                     _logger.LogInformation("User created a new account with password.");
@@ -211,13 +211,13 @@ namespace WebForm_final.Areas.Identity.Pages.Account
             }
         }
 
-        private IUserEmailStore<IdentityUser> GetEmailStore()
+        private IUserEmailStore<UserApplication> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<IdentityUser>)_userStore;
+            return (IUserEmailStore<UserApplication>)_userStore;
         }
     }
 }

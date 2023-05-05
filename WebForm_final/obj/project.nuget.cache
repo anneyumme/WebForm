@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZdqoO6c9lKx/8vUZuz9mlvhzqdtmx6xKnS4I476TkWoW0HmZEd0BAVJcAttDPVEm//HpmwoQhxFg3Erc0NVGsA==",
+  "dgSpecHash": "noDn2CLXVrmKdJfm18CcYBbe+ahIp0bAEghH9orM4H/ubEnU6H52fbEb+23QXBDXEQmJ0uhSjkgWU3XajF0+EQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\WebForm_final.csproj",
   "expectedPackageFiles": [
@@ -143,6 +143,7 @@
     "C:\\Users\\ninhd\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\ninhd\\.nuget\\packages\\stripe.net\\41.14.0\\stripe.net.41.14.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",

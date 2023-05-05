@@ -12,7 +12,12 @@ namespace Web.Models
     {
         [Required]
         [Display(Name = "Full Name")]
-        public string FullName { get; set; }
+        public string? FullName { get; set; }
         public string? AvatarUrl { get; set; }
-    }
+		public string? StreetAdress { get; set; }
+		public string? City { get; set; }
+		public string? Province { get; set; }
+
+
+	}
 }

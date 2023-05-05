@@ -13,7 +13,9 @@ namespace Web.DataAccess.Repository.Interface
         IBrandRepository Brand { get; }
         IProductRepository Product { get; }
 		IUserApplication userApplication { get; }
+        IOrderRepository Order { get; }
+        IOrderDetailRepository OrderDetail { get; }
 
-		void update();
+        void update();
     }
 }

@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\Images\\Product\\5704c22b-dc82-459f-bc7c-27d5529fe2eb.jpg"
     },
     {
+      "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\6ad82472-c685-4173-be7d-57ca0f4f9dd1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Product\\6ad82472-c685-4173-be7d-57ca0f4f9dd1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\a1d93498-786b-44af-82bb-67f37ca5d27f.jpg",
+      "PackagePath": "staticwebassets\\Images\\Product\\a1d93498-786b-44af-82bb-67f37ca5d27f.jpg"
+    },
+    {
       "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\d41e2953-0235-4359-8fba-9491ce51ec7f.jpg",
       "PackagePath": "staticwebassets\\Images\\Product\\d41e2953-0235-4359-8fba-9491ce51ec7f.jpg"
     },
@@ -23,6 +31,10 @@
     {
       "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Brand.js",
       "PackagePath": "staticwebassets\\js\\Brand.js"
+    },
+    {
+      "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Order.js",
+      "PackagePath": "staticwebassets\\js\\Order.js"
     },
     {
       "Id": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\Product.js",

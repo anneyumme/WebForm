@@ -10,6 +10,6 @@ namespace Web.DataAccess.ViewModel
 	public class ShoppingCartViewModel
 	{
 		public IEnumerable<ShoppingCart> ListCart { get; set; }
-		public double TotalPrice { get; set; }	
+		public Order Order { get; set; }
 	}
 }

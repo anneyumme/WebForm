@@ -11,7 +11,7 @@ using Web.Utility;
 namespace WebForm_final.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-	[Authorize(Roles = Role.Role_user_admin)]
+	[Authorize(Roles = Global.Role_user_admin)]
 	public class ProductController : Controller
 	{
 		private readonly IUnitOfWork _UnitOfWork;

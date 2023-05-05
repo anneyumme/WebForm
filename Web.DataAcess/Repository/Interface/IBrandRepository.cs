@@ -7,9 +7,9 @@ using Web.Models;
 
 namespace Web.DataAccess.Repository.Interface
 {
-    public interface IBrandRepository : IRepository<Brand>
+    public interface IOrderDetailRepository : IRepository<OrderDetail>
     {
-        void update(Brand brand);
+        void update(OrderDetail orderDetail);
         void save();
     }
 }

@@ -308,6 +308,10 @@
               "target": "Package",
               "version": "[7.0.6, )"
             },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[41.14.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"

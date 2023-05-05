@@ -1,0 +1,223 @@
+﻿@model OrderViewModel
+<form method="post">
+    <input asp-for="Order.Id" hidden />
+    <br />
+    <div class="container">
+        <div class="card" style="border-radius: 8px">
+            <div class="card-header bg-dark text-light ml-0" style="border-radius: 8px; font-size: 20px">
+                <div class="container row">
+                    <div class="col-12 d-none d-md-block col-md-6 pb-1 pt-2">
+                        <i class="fas fa-shopping-cart"></i> &nbsp; Order Summary
+                    </div>
+                    <div class="col-12 col-md-4 offset-md-2 text-right">
+                        <a asp-action="Index" class="btn btn-outline-info form-control btn-sm" style="border-radius: 8px; font-size: 15px">Back to Orders</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="container rounded p-2">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 pb-4">
+                            <div class="row">
+                                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-primary">PickUp Details:</span>
+                                </h4>
+                            </div>
+                            <div class="row my-1">
+                                <div class="col-3">Name</div>
+                                <div class="col-9">
+                                    @if (User.IsInRole(Global.Role_user_admin)) {
+                                        <input asp-for="Order.Name" type="text"  style="border-radius: 8px"class="form-control" />
+                                        <span asp-validation-for="Order.Name" class="text-danger"></span>
+                                    }
+                                    else {
+                                        <input asp-for="Order.Name" readonly  style="border-radius: 8px"type="text" class="form-control" />
+                                    }
+
+                                </div>
+                            </div>
+                            <div class="row my-1">
+                                <div class="col-3">Phone</div>
+                                <div class="col-9">
+                                    @if (User.IsInRole(Global.Role_user_admin)) {
+                                        <input asp-for="Order.PhoneNumber" type="text"  style="border-radius: 8px"class="form-control" />
+                                        <span asp-validation-for="Order.PhoneNumber" class="text-danger"></span>
+                                    }
+                                    else {
+                                        <input asp-for="Order.PhoneNumber"  style="border-radius: 8px"readonly type="text" class="form-control" />
+                                    }
+                                </div>
+                            </div>
+                            <div class="row my-1">
+                                <div class="col-3">Address</div>
+                                <div class="col-9">
+                                    @if (User.IsInRole(Global.Role_user_admin)) {
+                                        <input asp-for="Order.StreetAdress" style="border-radius: 8px" type="text" class="form-control" />
+                                        <span asp-validation-for="Order.StreetAdress" class="text-danger"></span>
+                                    }
+                                    else {
+                                        <input asp-for="Order.StreetAdress" style="border-radius: 8px" readonly type="text" class="form-control" />
+                                    }
+                                </div>
+                            </div>
+                            <div class="row my-1">
+                                <div class="col-3">City</div>
+                                <div class="col-9">
+                                    @if (User.IsInRole(Global.Role_user_admin)) {
+                                        <input asp-for="Order.City" type="text" style="border-radius: 8px" class="form-control" />
+                                        <span asp-validation-for="Order.City" class="text-danger"></span>
+                                    }
+                                    else {
+                                        <input asp-for="Order.City" readonly style="border-radius: 8px" type="text" class="form-control" />
+                                    }
+                                </div>
+                            </div>
+                            <div class="row my-1">
+                                <div class="col-3">Province</div>
+                                <div class="col-9">
+                                    @if (User.IsInRole(Global.Role_user_admin)) {
+                                        <input asp-for="Order.Province" style="border-radius: 8px" type="text" class="form-control" />
+                                        <span asp-validation-for="Order.Province" class="text-danger"></span>
+                                    }
+                                    else {
+                                        <input asp-for="Order.Province"  style="border-radius: 8px"readonly type="text" class="form-control" />
+                                    }
+                                </div>
+                            </div>
+                            
+                            <div class="row my-1">
+                                <div class="col-3">Email</div>
+                                <div class="col-9">
+                                    <input asp-for="Order.ApplicationUser.Email"  style="border-radius: 8px"readonly type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row my-1">
+                                <div class="col-3">Order Date</div>
+                                <div class="col-9">
+                                    <input value="@Model.Order.OrderCreate.ToShortDateString()" style="border-radius: 8px" readonly type="text" class="form-control" />
+                                </div>
+                            </div>
+                                                        
+                            <div class="row my-1">
+                                <div class="col-3">Shipping Date</div>
+                                <div class="col-9">
+                                    <input value="@Model.Order.ShippingDate.ToShortDateString()" style="border-radius: 8px" readonly type="text" class="form-control" />
+                                </div>
+                            </div>
+
+                            @if (User.IsInRole(Global.Role_user_admin)) {
+                                <div class="row my-1">
+                                    <div class="col-3">Session ID</div>
+                                    <div class="col-9">
+
+                                        <input asp-for="Order.SessionId"  style="border-radius: 8px" readonly type="text" class="form-control" />
+
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">Payment Intent ID</div>
+                                    <div class="col-9">
+
+                                        <input asp-for="Order.PaymentItentId"  style="border-radius: 8px" readonly type="text" class="form-control" />
+
+                                    </div>
+                                </div>
+                            }
+                            <div class="row my-1">
+
+                                @if (Model.Order.SessionId == null) {
+                                    <div class="col-3">Payment Due Date</div>
+                                    <div class="col-9">
+                                        <input value="@Model.Order.PaymentDueDate.ToShortDateString()" style="border-radius: 8px" readonly type="text" class="form-control" />
+                                    </div>
+
+                                }
+                                else {
+                                    <div class="col-3">Payment Date</div>
+                                    <div class="col-9">
+                                        <input value="@Model.Order.PaymentDate.ToShortDateString()" style="border-radius: 8px" readonly type="text" class="form-control" />
+                                    </div>
+                                }
+
+                            </div>
+                            <div class="row my-1">
+                                <div class="col-3">Payment Status</div>
+                                <div class="col-9">
+                                    <input asp-for="Order.PaymentStatus"  style="border-radius: 8px" readonly type="text" class="form-control" />
+                                </div>
+                            </div>
+                            @if (User.IsInRole(Global.Role_user_admin)) {
+                                <button type="submit" asp-action="UpdateOrderDetail" style="border-radius: 8px" class="btn btn-warning form-control my-1">Update Order Details</button>
+                            }
+                        </div>
+                        <div class="col-12 col-lg-5 offset-lg-1">
+                            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-primary mt-5">Order Summary</span>
+                            </h4>
+                            <label class="btn btn-outline-primary form-control my-2" style="border-radius: 8px" >Order Status - @Model.Order.orderStatus</label>
+
+                            <ul class="list-group mb-3" style="border-radius: 8px" >
+                                @foreach (var detail in Model.OrderDetail) {
+                                    <li class="list-group-item d-flex justify-content-between p-2" style="border-radius: 8px">
+                                        <div class="row container">
+                                            <div class="col-8">
+
+                                                <h6 class="my-0 text-primary">@detail.Product.name</h6>
+                                                <small class="text-muted">Price : @detail.Price.ToString("#,##0 VND")</small><br />
+                                                <small class="text-muted">Quantity : @detail.Quanity</small>
+                                            </div>
+                                            <div class="col-4 text-end">
+                                                    <p class="text-success">@((detail.Quanity * detail.Price).ToString("#,##0 VND"))</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                                <li class="list-group-item bg-primary" style="border-radius: 8px">
+                                    <div class="row container">
+                                        <div class="col-6">
+                                            <h5 class="text-white pt-2">TOTAL </h5>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <h5 class="text-white pt-2">@Model.Order.OrderTotal.ToString("#,##0 VND")</h5>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                           
+                            @if (User.IsInRole(Global.Role_user_admin)) 
+                            {
+                                @if (Model.Order.orderStatus == Global.Status_approved) 
+                                {
+                                    <button type="submit" style="border-radius: 8px" asp-action="StartProcessing"
+                                            class="btn btn-primary form-control my-1">
+                                        Start Processing
+                                    </button>
+                                }
+                                @if (Model.Order.orderStatus == Global.Status_inProgress)
+                                {
+                                    <button type="submit" style="border-radius: 8px" asp-action="ShipOrder" onclick="return validateInput()" class="btn btn-primary form-control my-1">Ship Order</button>
+                                }
+
+                            }
+                            @if (Model.Order.orderStatus != Global.Status_refunded &&
+                            Model.Order.orderStatus != Global.Status_canclled &&
+                            Model.Order.orderStatus != Global.Status_shipped &&
+                            Model.Order.orderStatus != Global.Status_inProgress &&
+                            Model.Order.orderStatus != Global.Status_complete)
+                            {
+                                <button asp-action="CancelOrder" style="border-radius: 8px" type="submit" class="btn btn-danger form-control my-1">Cancel Order</button>
+                            }
+                            else
+                            {
+                                <button asp-action="CancelOrder" style="border-radius: 8px" disabled type="submit" class="btn btn-danger form-control my-1">Cancel Order</button>
+
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -11,10 +11,11 @@ namespace Web.Models
 {
 	public class ShoppingCart
 	{
+		//Each Shoppping Cart is like a cart of many products but only belongs to one user
 		public int Id { get; set; }
 		public int ProductId { get; set; }
 		[Range(0, 1000, ErrorMessage ="Please enter a value between 1 and 1000")]
-		public int Quantity { get; set; }
+		public int Quantity { get; set; } //quantity each product
 		public string ApplicationUserId { get; set; }
 
 		[ValidateNever]
@@ -25,7 +26,7 @@ namespace Web.Models
 		[ForeignKey("ApplicationUserId")]
 		public UserApplication ApplicationUser { get; set; }
 		[NotMapped]
-		public double price { get; set;}
+		public double price { get; set; } //quantity each product
 	}
 }
 

@@ -16,15 +16,19 @@ namespace Web.DataAccess.Repository
 		public IProductRepository Product { get; }
 		public IShoppingCartRepository ShoppingCart { get; }
 		public IUserApplication userApplication { get; }
+		public IOrderRepository Order { get; }
+		public IOrderDetailRepository OrderDetail { get; }
 
 		public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
 			userApplication= new UserApplicationRepository(_db);
 			Brand = new BrandRepository(_db);               //  setting the value of the "Brand" property to a new
-			Product = new ProductRepository(_db);
-			ShoppingCart = new ShoppingCartRepository(_db); //  instance of the "BrandRepository" class, we can now use the methods and
-											                //  properties defined in the "IBrandRepository" interface
+			Product = new ProductRepository(_db);          //  instance of the "BrandRepository" class, we can now use the methods and
+                                                            //  properties defined in the "IBrandRepository" interface
+            ShoppingCart = new ShoppingCartRepository(_db);
+			Order = new OrderRepository(_db);
+			OrderDetail = new OrderDetailRepository(_db);                                                
 		}
 		public void update()
 		{
