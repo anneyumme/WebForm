@@ -12,7 +12,7 @@ using Web.Utility;
 
 namespace WebForm_final.Areas.Admin.Controllers
 {
-	[Authorize]
+	[Authorize(Roles = Global.Role_user_admin)]
 	[Area("Admin")]
 	public class OrderController : Controller
 	{

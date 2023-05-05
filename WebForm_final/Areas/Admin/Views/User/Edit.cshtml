@@ -1,0 +1,62 @@
+﻿@model RoleMannagementViewModel
+
+<form method="post">
+	<input type="hidden" asp-for="UserApplication.Id" />
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary text-center">Edit User</h2>
+		</div>
+		<div class="mb-3">
+			<label asp-for="UserApplication.FullName"></label>
+			<input asp-for="UserApplication.FullName" disabled style="border-radius: 8px" class="form-control" />
+			<span asp-validation-for="UserApplication.FullName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="UserApplication.Email"></label>
+			<input asp-for="UserApplication.Email" disabled style="border-radius: 8px" class="form-control" />
+			<span asp-validation-for="UserApplication.Email" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="UserApplication.PhoneNumber"></label>
+			<input asp-for="UserApplication.PhoneNumber" disabled style="border-radius: 8px" class="form-control" />
+			<span asp-validation-for="UserApplication.PhoneNumber" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="UserApplication.City"></label>
+			<input asp-for="UserApplication.City" disabled style="border-radius: 8px" class="form-control" />
+			<span asp-validation-for="UserApplication.City" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="UserApplication.Province"></label>
+			<input asp-for="UserApplication.Province" disabled style="border-radius: 8px" class="form-control" />
+			<span asp-validation-for="UserApplication.Province" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="UserApplication.StreetAdress"></label>
+			<input asp-for="UserApplication.StreetAdress" disabled style="border-radius: 8px" class="form-control" />
+			<span asp-validation-for="UserApplication.StreetAdress" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="UserApplication.Role"></label>
+			<select asp-for="UserApplication.Role" style="border-radius: 8px" asp-items="@Model.RoleList" class="form-control">
+			</select>
+			<span asp-validation-for="UserApplication.Role" class="text-danger"></span>
+		</div>
+		
+		<div class="row">
+			<div class="col-6 col-md-3">
+				<button type="submit" class="btn btn-primary form-control" style="border-radius:8px">Update</button>
+			</div>
+			<div class="col-6 col-md-3">
+				<a asp-controller="User" asp-action="Index" class="btn btn-secondary form-control border" style="border-radius:8px">
+					Back to List
+				</a>
+			</div>
+		</div>
+	</div>
+</form>
+@section Scripts{
+	@{
+		<partical name="_ValidationScriptsPartial" />
+	}
+}

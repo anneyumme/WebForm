@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3TxnfSzY4PK87Gyrs4bj647iQscavHwL/R//MLMXlLI=",
+  "Hash": "se1qVQLyNmwUM5dfuTrm+hs7OASeC0s5Qx7+a1927RE=",
   "Source": "WebForm_final",
   "BasePath": "_content/WebForm_final",
   "Mode": "Default",
@@ -1239,6 +1239,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\js\\User.js",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "js/User.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\User.js"
     },
     {
       "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
