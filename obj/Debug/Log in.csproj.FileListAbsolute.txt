@@ -1,0 +1,66 @@
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\Log in.exe.config
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\Log in.pdb
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.AssemblyReference.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.SuggestedBindingRedirects.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.Form1.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.Properties.Resources.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.GenerateResource.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.CoreCompileInputs.cache
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.pdb
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.GoodsReceived.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.Menu.resources
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log_in.GoodsDelivery.resources
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\BouncyCastle.Crypto.dll
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\itextsharp.dll
+C:\Công nghệ phần mềm\homework\Log in\bin\Debug\itextsharp.xml
+C:\Công nghệ phần mềm\homework\Log in\obj\Debug\Log in.csproj.CopyComplete
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Log in.exe.config
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Log in.pdb
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\itextsharp.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.AssemblyReference.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.SuggestedBindingRedirects.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.Form1.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.GoodsDelivery.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.GoodsReceived.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.Menu.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.Properties.Resources.resources
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.GenerateResource.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.CoreCompileInputs.cache
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.csproj.CopyComplete
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.exe
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log in.pdb
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\BouncyCastle.Crypto.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Google.Protobuf.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\K4os.Compression.LZ4.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\K4os.Hash.xxHash.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\MySql.Data.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Buffers.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.IO.Pipelines.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Memory.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Numerics.Vectors.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\BouncyCastle.Crypto.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Google.Protobuf.pdb
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\Google.Protobuf.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\K4os.Compression.LZ4.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\K4os.Hash.xxHash.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\MySql.Data.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Buffers.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.IO.Pipelines.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Memory.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Numerics.Vectors.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\BCrypt.Net-Next.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\BCrypt.Net-Next.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\EntityFramework.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\EntityFramework.SqlServer.dll
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\EntityFramework.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\bin\Debug\EntityFramework.SqlServer.xml
+C:\Công nghệ phần mềm\homework\Winform\Log in\obj\Debug\Log_in.Brand.resources
