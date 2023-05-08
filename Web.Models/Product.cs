@@ -33,7 +33,7 @@ namespace Web.Models
 		public Brand brand { get; set; }
 		[ValidateNever]
 		[Display(Name = "Image File Upload")]
-		public string imageUrl { get; set; }
+		public string? imageUrl { get; set; }
 		[Display(Name = "Year of Production")]
 		[Required]
 		public double year { get; set; }

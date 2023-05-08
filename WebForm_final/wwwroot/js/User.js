@@ -59,7 +59,7 @@ function Unlock(url) {
     })
     Swal.fire(
         'Good job!',
-        'Unlock account successfully!',
+        'Lock account successfully!',
         'success'
     )
 }
@@ -74,7 +74,7 @@ function Lock(url) {
     })
     Swal.fire(
         'Good job!',
-        'Lock account successfully',
+        'Unlock account successfully',
         'success'
     )
 }

@@ -29,10 +29,11 @@ namespace Web.Models
         public string? SessionId { get; set; }
 		[Display(Name = "Payment Type")]
         public string paymentType { get; set; }
-
-        [Required]
+		[Display(Name = "Phone Number")]
+		[Required]
         public string PhoneNumber { get; set; }
-        [Required]
+		[Display(Name = "Street Address ")]
+		[Required]
         public string StreetAdress { get; set; }
         [Required]
         public string City { get; set; }

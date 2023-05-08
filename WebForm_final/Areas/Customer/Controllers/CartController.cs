@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Stripe.Checkout;
 using System.Security.Claims;
@@ -38,6 +39,7 @@ namespace WebForm_final.Areas.Customer.Controllers
 				listProduct.price = getPrice(listProduct);
 				shoppingCartVM.Order.OrderTotal += (listProduct.price * listProduct.Quantity);
 			}
+			HttpContext.Session.SetInt32("CartCount", shoppingCartVM.ListCart.Count());
 			return View(shoppingCartVM);
 		}
 		private double getPrice(ShoppingCart shoppingCart)

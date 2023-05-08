@@ -76,6 +76,14 @@ namespace WebForm_final.Areas.Admin.Controllers
 						}
 						productVM.Product.imageUrl = @"\Images\Product\" + fileName;
 					}
+					else
+					{
+						using (var fileStream = new FileStream(Path.Combine(imagePath, fileName), FileMode.Create))
+						{
+							file.CopyTo(fileStream);
+						}
+						productVM.Product.imageUrl = @"\Images\Product\" + fileName;
+					}
 				}
 				_UnitOfWork.Product.update(productVM.Product);
 				_UnitOfWork.Product.save();
@@ -141,7 +149,6 @@ namespace WebForm_final.Areas.Admin.Controllers
 				productVM.BrandList = brandList;
 				return View(productVM);
 			}
-
 		}
 
 		// Delete
@@ -197,9 +204,10 @@ namespace WebForm_final.Areas.Admin.Controllers
 				{
 					System.IO.File.Delete(imagePathOld);
 				}
-				_UnitOfWork.Product.remove(ProductFromDb);
-				_UnitOfWork.Product.save();
+				
 			}
+			_UnitOfWork.Product.remove(ProductFromDb);
+			_UnitOfWork.Product.save();
 
 			return Json(new {success= true,  message= "Delete Successfuly"});
 

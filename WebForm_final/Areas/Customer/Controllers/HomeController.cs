@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 using System.Security.Claims;
 using Web.DataAccess.Repository.Interface;
+using Web.DataAccess.ViewModel;
 using Web.Models;
 
 namespace WebForm_final.Areas.Customer.Controllers
@@ -21,7 +23,26 @@ namespace WebForm_final.Areas.Customer.Controllers
 
         public IActionResult Index()
         {
+			if (User.Identity.IsAuthenticated)
+            {
+				var claimsIdentity = (ClaimsIdentity)User.Identity;
+				var UserId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+				ShoppingCartViewModel shoppingCartVM = new()
+				{
+					ListCart = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == UserId, includeProperties: "Product"),
+					Order = new Order()
+				};
+				HttpContext.Session.SetInt32("CartCount", shoppingCartVM.ListCart.Count());
+			}
+            else
+            {
+				HttpContext.Session.SetInt32("CartCount", 0);
+
+			}
+
 			List<Product> productsList = _unitOfWork.Product.GetAll(includeProperties: "brand").ToList();
+            List<Brand> brandsList = _unitOfWork.Brand.GetAll().ToList();
+            ViewBag.BrandList = brandsList;
             return View(productsList);
         }
 
@@ -52,6 +73,7 @@ namespace WebForm_final.Areas.Customer.Controllers
             {
                 _unitOfWork.ShoppingCart.add(shoppingCart);
             }
+            
             _unitOfWork.ShoppingCart.save();
             TempData["notification"] = "Cart Updated Successfully";
            

@@ -1,27 +1,50 @@
 ﻿@model List<Product>
 <div class="row pb-3">
-	@foreach (var product in Model)
+	@foreach (var brandList in ViewBag.BrandList)
 	{
-		<div class="col-lg-3 col-sm-6">
-			<div class="row p-2">
-				<div class="col-12 p-1">
-					<div class="card border-p-5 shadow border-top border-5 rounded">
-						<img src="@product.imageUrl" class="card-img-top rounded" style="width: 330px; height: 330px" />
-						<div class="card-body pb-0">
-							<div class="pl-1">
-								<p class="card-title h5 text-dark opacity-75 text-uppercase text-center">@product.name</p>
+		int count = 0;
+		@foreach (var product in Model)
+		{
+			if (product.brand.name == brandList.name)
+			{
+				if (count == 0)
+				{
+					<header class="mb-4">
+						<h3>@brandList.name</h3>
+						<hr class="hr" />
+					</header>
+					count = count + 1;
+				}		
+				<div class="col-lg-3 col-sm-6">
+					<div class="row p-2">
+						<div class="col-12 p-1">
+							<div class="card border-p-5 shadow border-top border-5 rounded ">
+								@if (product.imageUrl == null)
+								{
+									<img src="https://placehold.jp/35/ffffff/000000/330x330.png?text=Image%20coming%20soon" style="height: 330px; width: 330px"/>
+
+								}
+								else
+								{
+									<img src="@product.imageUrl" class="card-img-top rounded" style="width: 330px; height: 330px" />
+								}
+								<div class="card-body pb-0">
+									<div class="pl-1">
+										<p class="card-title h5 text-dark opacity-75 text-uppercase text-center">@product.name</p>
+									</div>
+									<div class="pl-1">
+										<p class="card-title h5 text-dark opacity-75 text-uppercase text-center mb-3"><span class="text-dark" style="font-size: 25px; font-weight: bold">@product.price.ToString("#,##0 VND")</span></p>
+									</div>
+									<a asp-action="Details" asp-route-productid="@product.id" class="btn btn-primary bg-gradient border-5 form-control mb-4" style="border-radius: 8px">
+										Details
+									</a>
+								</div>
 							</div>
-							<div class="pl-1">
-								<p class="card-title h5 text-dark opacity-75 text-uppercase text-center mb-3"><span class="text-dark" style="font-size: 25px; font-weight: bold">@product.price.ToString("#,##0 VND")</span></p>
-							</div>
-							<a asp-action="Details" asp-route-productid="@product.id" class="btn btn-primary bg-gradient border-5 form-control mb-4" style="border-radius: 8px">
-								Details
-							</a>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			}
+		}
 	}
 </div>
 
