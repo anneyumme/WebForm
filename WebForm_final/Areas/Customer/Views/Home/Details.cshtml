@@ -22,7 +22,14 @@
 				</div>
 				<div class="row">
 					<div class="col-12 col-lg-3 offset-lg-1 text-center mb-3">
-						<img src="@Url.Content(@Model.Product.imageUrl)" width="100%" class="rounded" />
+						@if (string.IsNullOrEmpty(@Model.Product.imageUrl))
+						{
+							<img src="https://placehold.jp/35/ffffff/000000/330x330.png?text=Image%20coming%20soon" class="card-img-top rounded" />
+						}
+						else
+						{
+							<img src="@Url.Content(@Model.Product.imageUrl)" width="100%" class="rounded" />
+						}
 					</div>
 					<div class="col-12 col-lg-6 offset-lg-1">
 

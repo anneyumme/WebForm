@@ -19,14 +19,13 @@
 					<div class="row p-2">
 						<div class="col-12 p-1">
 							<div class="card border-p-5 shadow border-top border-5 rounded ">
-								@if (product.imageUrl == null)
+								@if (string.IsNullOrEmpty(product.imageUrl))
 								{
-									<img src="https://placehold.jp/35/ffffff/000000/330x330.png?text=Image%20coming%20soon" style="height: 330px; width: 330px"/>
-
+									<img src="https://placehold.jp/35/ffffff/000000/330x330.png?text=Image%20Unavailable" class="card-img-top rounded" />
 								}
 								else
 								{
-									<img src="@product.imageUrl" class="card-img-top rounded" style="width: 330px; height: 330px" />
+									<img src="@product.imageUrl" class="card-img-top rounded" style="width: 330px; height: 330px"/>
 								}
 								<div class="card-body pb-0">
 									<div class="pl-1">
