@@ -28,328 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grb1 = new System.Windows.Forms.GroupBox();
-            this.cbCity = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.fdsà = new System.Windows.Forms.Label();
-            this.dtp = new System.Windows.Forms.DateTimePicker();
-            this.txtProduct = new System.Windows.Forms.TextBox();
-            this.txtAgent = new System.Windows.Forms.TextBox();
-            this.txtDeli = new System.Windows.Forms.TextBox();
-            this.txtOrder = new System.Windows.Forms.TextBox();
-            this.txtPayment = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtQuality = new System.Windows.Forms.TextBox();
-            this.txtgoods = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GoodsDelivery));
+            this.grb2 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.grd = new System.Windows.Forms.DataGridView();
+            this.grp1 = new System.Windows.Forms.GroupBox();
+            this.orderTotalTXT = new System.Windows.Forms.TextBox();
+            this.orderCreateTXT = new System.Windows.Forms.TextBox();
+            this.userTXT = new System.Windows.Forms.TextBox();
+            this.paymentStatusTXT = new System.Windows.Forms.TextBox();
+            this.paymentDueDateTXT = new System.Windows.Forms.TextBox();
+            this.cityTXT = new System.Windows.Forms.TextBox();
+            this.streetTXT = new System.Windows.Forms.TextBox();
+            this.shippingTXT = new System.Windows.Forms.TextBox();
+            this.orderStatusTXT = new System.Windows.Forms.TextBox();
+            this.sessionIDTXT = new System.Windows.Forms.TextBox();
+            this.nameTXT = new System.Windows.Forms.TextBox();
+            this.provinceTXT = new System.Windows.Forms.TextBox();
+            this.paymentltentIdTXT = new System.Windows.Forms.TextBox();
+            this.phoneTXT = new System.Windows.Forms.TextBox();
+            this.paymentTypeTXT = new System.Windows.Forms.TextBox();
+            this.paymentDateTXT = new System.Windows.Forms.TextBox();
+            this.idTXT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.grb2 = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnTrans = new System.Windows.Forms.Button();
-            this.grd = new System.Windows.Forms.DataGridView();
-            this.grb1.SuspendLayout();
+            this.btnPrintAll = new System.Windows.Forms.Button();
             this.grb2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
+            this.grp1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grb1
-            // 
-            this.grb1.Controls.Add(this.cbCity);
-            this.grb1.Controls.Add(this.label12);
-            this.grb1.Controls.Add(this.label11);
-            this.grb1.Controls.Add(this.label10);
-            this.grb1.Controls.Add(this.comboBox1);
-            this.grb1.Controls.Add(this.fdsà);
-            this.grb1.Controls.Add(this.dtp);
-            this.grb1.Controls.Add(this.txtProduct);
-            this.grb1.Controls.Add(this.txtAgent);
-            this.grb1.Controls.Add(this.txtDeli);
-            this.grb1.Controls.Add(this.txtOrder);
-            this.grb1.Controls.Add(this.txtPayment);
-            this.grb1.Controls.Add(this.txtPrice);
-            this.grb1.Controls.Add(this.txtAddress);
-            this.grb1.Controls.Add(this.txtPhone);
-            this.grb1.Controls.Add(this.txtQuality);
-            this.grb1.Controls.Add(this.txtgoods);
-            this.grb1.Controls.Add(this.label4);
-            this.grb1.Controls.Add(this.label3);
-            this.grb1.Controls.Add(this.label2);
-            this.grb1.Controls.Add(this.label8);
-            this.grb1.Controls.Add(this.label7);
-            this.grb1.Controls.Add(this.label9);
-            this.grb1.Controls.Add(this.label6);
-            this.grb1.Controls.Add(this.label5);
-            this.grb1.Controls.Add(this.label1);
-            this.grb1.Location = new System.Drawing.Point(5, 12);
-            this.grb1.Name = "grb1";
-            this.grb1.Size = new System.Drawing.Size(1209, 216);
-            this.grb1.TabIndex = 1;
-            this.grb1.TabStop = false;
-            this.grb1.Text = "Information";
-            // 
-            // cbCity
-            // 
-            this.cbCity.FormattingEnabled = true;
-            this.cbCity.Items.AddRange(new object[] {
-            "Ho Chi Minh ",
-            "Can Tho ",
-            "Ha Noi",
-            "Vung Tau",
-            "Nha Trang",
-            "Da Lat",
-            "Lang Son",
-            "Lao Cai",
-            "Hue",
-            "Ben Tre",
-            "Long Xuyen",
-            "My Tho"});
-            this.cbCity.Location = new System.Drawing.Point(515, 103);
-            this.cbCity.Name = "cbCity";
-            this.cbCity.Size = new System.Drawing.Size(260, 24);
-            this.cbCity.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(399, 106);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(29, 16);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "City";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(399, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 16);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "streetAddress";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(399, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 16);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "phoneNumber";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "By Cash",
-            "Banking",
-            "Momo"});
-            this.comboBox1.Location = new System.Drawing.Point(943, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(259, 24);
-            this.comboBox1.TabIndex = 10;
-            // 
-            // fdsà
-            // 
-            this.fdsà.AutoSize = true;
-            this.fdsà.Location = new System.Drawing.Point(821, 68);
-            this.fdsà.Name = "fdsà";
-            this.fdsà.Size = new System.Drawing.Size(111, 16);
-            this.fdsà.TabIndex = 2;
-            this.fdsà.Text = "paymentMethods";
-            // 
-            // dtp
-            // 
-            this.dtp.Location = new System.Drawing.Point(96, 60);
-            this.dtp.Name = "dtp";
-            this.dtp.Size = new System.Drawing.Size(284, 22);
-            this.dtp.TabIndex = 2;
-            // 
-            // txtProduct
-            // 
-            this.txtProduct.Location = new System.Drawing.Point(95, 147);
-            this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(285, 22);
-            this.txtProduct.TabIndex = 4;
-            // 
-            // txtAgent
-            // 
-            this.txtAgent.Location = new System.Drawing.Point(95, 103);
-            this.txtAgent.Name = "txtAgent";
-            this.txtAgent.Size = new System.Drawing.Size(285, 22);
-            this.txtAgent.TabIndex = 3;
-            // 
-            // txtDeli
-            // 
-            this.txtDeli.Location = new System.Drawing.Point(95, 23);
-            this.txtDeli.Name = "txtDeli";
-            this.txtDeli.Size = new System.Drawing.Size(285, 22);
-            this.txtDeli.TabIndex = 1;
-            // 
-            // txtOrder
-            // 
-            this.txtOrder.Location = new System.Drawing.Point(943, 147);
-            this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Size = new System.Drawing.Size(262, 22);
-            this.txtOrder.TabIndex = 12;
-            // 
-            // txtPayment
-            // 
-            this.txtPayment.Location = new System.Drawing.Point(943, 106);
-            this.txtPayment.Name = "txtPayment";
-            this.txtPayment.Size = new System.Drawing.Size(262, 22);
-            this.txtPayment.TabIndex = 11;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(436, 183);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(392, 22);
-            this.txtPrice.TabIndex = 13;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(515, 65);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(260, 22);
-            this.txtAddress.TabIndex = 6;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(515, 26);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(260, 22);
-            this.txtPhone.TabIndex = 5;
-            // 
-            // txtQuality
-            // 
-            this.txtQuality.Location = new System.Drawing.Point(515, 147);
-            this.txtQuality.Name = "txtQuality";
-            this.txtQuality.Size = new System.Drawing.Size(260, 22);
-            this.txtQuality.TabIndex = 8;
-            // 
-            // txtgoods
-            // 
-            this.txtgoods.Location = new System.Drawing.Point(941, 23);
-            this.txtgoods.Name = "txtgoods";
-            this.txtgoods.Size = new System.Drawing.Size(261, 22);
-            this.txtgoods.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "agentID";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "productID";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "deliveryDate";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(370, 189);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "price";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(399, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "quantity";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(821, 153);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "orderStatus";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(821, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "paymentStatus";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(821, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "goodsStatus";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "deliveryID";
             // 
             // grb2
             // 
+            this.grb2.Controls.Add(this.btnPrintAll);
             this.grb2.Controls.Add(this.btnBack);
-            this.grb2.Controls.Add(this.btnDelete);
             this.grb2.Controls.Add(this.btnPrint);
             this.grb2.Controls.Add(this.btnSave);
             this.grb2.Controls.Add(this.btnUpdate);
-            this.grb2.Controls.Add(this.btnAdd);
-            this.grb2.Controls.Add(this.btnTrans);
-            this.grb2.Location = new System.Drawing.Point(237, 234);
+            this.grb2.Location = new System.Drawing.Point(436, 234);
             this.grb2.Name = "grb2";
-            this.grb2.Size = new System.Drawing.Size(785, 50);
+            this.grb2.Size = new System.Drawing.Size(770, 50);
             this.grb2.TabIndex = 10;
             this.grb2.TabStop = false;
             this.grb2.Text = "Function";
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(701, 18);
+            this.btnBack.Location = new System.Drawing.Point(639, 18);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 132;
@@ -357,19 +100,9 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(141, 18);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 131;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(589, 18);
+            this.btnPrint.Location = new System.Drawing.Point(363, 18);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 130;
@@ -379,7 +112,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(475, 18);
+            this.btnSave.Location = new System.Drawing.Point(228, 18);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 12;
@@ -389,33 +122,13 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(363, 18);
+            this.btnUpdate.Location = new System.Drawing.Point(102, 18);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(33, 18);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnTrans
-            // 
-            this.btnTrans.Location = new System.Drawing.Point(253, 18);
-            this.btnTrans.Name = "btnTrans";
-            this.btnTrans.Size = new System.Drawing.Size(75, 23);
-            this.btnTrans.TabIndex = 10;
-            this.btnTrans.Text = "Transfer";
-            this.btnTrans.UseVisualStyleBackColor = true;
-            this.btnTrans.Click += new System.EventHandler(this.btnTrans_Click);
             // 
             // grd
             // 
@@ -424,66 +137,397 @@
             this.grd.Name = "grd";
             this.grd.RowHeadersWidth = 51;
             this.grd.RowTemplate.Height = 24;
-            this.grd.Size = new System.Drawing.Size(1211, 169);
+            this.grd.Size = new System.Drawing.Size(1748, 254);
             this.grd.TabIndex = 11;
             this.grd.Click += new System.EventHandler(this.grd_Click);
+            // 
+            // grp1
+            // 
+            this.grp1.Controls.Add(this.orderTotalTXT);
+            this.grp1.Controls.Add(this.orderCreateTXT);
+            this.grp1.Controls.Add(this.userTXT);
+            this.grp1.Controls.Add(this.paymentStatusTXT);
+            this.grp1.Controls.Add(this.paymentDueDateTXT);
+            this.grp1.Controls.Add(this.cityTXT);
+            this.grp1.Controls.Add(this.streetTXT);
+            this.grp1.Controls.Add(this.shippingTXT);
+            this.grp1.Controls.Add(this.orderStatusTXT);
+            this.grp1.Controls.Add(this.sessionIDTXT);
+            this.grp1.Controls.Add(this.nameTXT);
+            this.grp1.Controls.Add(this.provinceTXT);
+            this.grp1.Controls.Add(this.paymentltentIdTXT);
+            this.grp1.Controls.Add(this.phoneTXT);
+            this.grp1.Controls.Add(this.paymentTypeTXT);
+            this.grp1.Controls.Add(this.paymentDateTXT);
+            this.grp1.Controls.Add(this.idTXT);
+            this.grp1.Controls.Add(this.label4);
+            this.grp1.Controls.Add(this.label3);
+            this.grp1.Controls.Add(this.label2);
+            this.grp1.Controls.Add(this.label8);
+            this.grp1.Controls.Add(this.label7);
+            this.grp1.Controls.Add(this.label6);
+            this.grp1.Controls.Add(this.label17);
+            this.grp1.Controls.Add(this.label16);
+            this.grp1.Controls.Add(this.label15);
+            this.grp1.Controls.Add(this.label14);
+            this.grp1.Controls.Add(this.label13);
+            this.grp1.Controls.Add(this.label12);
+            this.grp1.Controls.Add(this.label11);
+            this.grp1.Controls.Add(this.label10);
+            this.grp1.Controls.Add(this.label9);
+            this.grp1.Controls.Add(this.label5);
+            this.grp1.Controls.Add(this.label1);
+            this.grp1.Location = new System.Drawing.Point(12, 12);
+            this.grp1.Name = "grp1";
+            this.grp1.Size = new System.Drawing.Size(1741, 216);
+            this.grp1.TabIndex = 12;
+            this.grp1.TabStop = false;
+            this.grp1.Text = "Information";
+            // 
+            // orderTotalTXT
+            // 
+            this.orderTotalTXT.Location = new System.Drawing.Point(130, 166);
+            this.orderTotalTXT.Name = "orderTotalTXT";
+            this.orderTotalTXT.Size = new System.Drawing.Size(202, 22);
+            this.orderTotalTXT.TabIndex = 1;
+            // 
+            // orderCreateTXT
+            // 
+            this.orderCreateTXT.Location = new System.Drawing.Point(130, 119);
+            this.orderCreateTXT.Name = "orderCreateTXT";
+            this.orderCreateTXT.Size = new System.Drawing.Size(202, 22);
+            this.orderCreateTXT.TabIndex = 1;
+            // 
+            // userTXT
+            // 
+            this.userTXT.Location = new System.Drawing.Point(130, 66);
+            this.userTXT.Name = "userTXT";
+            this.userTXT.Size = new System.Drawing.Size(202, 22);
+            this.userTXT.TabIndex = 1;
+            // 
+            // paymentStatusTXT
+            // 
+            this.paymentStatusTXT.Location = new System.Drawing.Point(504, 166);
+            this.paymentStatusTXT.Name = "paymentStatusTXT";
+            this.paymentStatusTXT.Size = new System.Drawing.Size(202, 22);
+            this.paymentStatusTXT.TabIndex = 1;
+            // 
+            // paymentDueDateTXT
+            // 
+            this.paymentDueDateTXT.Location = new System.Drawing.Point(504, 113);
+            this.paymentDueDateTXT.Name = "paymentDueDateTXT";
+            this.paymentDueDateTXT.Size = new System.Drawing.Size(202, 22);
+            this.paymentDueDateTXT.TabIndex = 1;
+            // 
+            // cityTXT
+            // 
+            this.cityTXT.Location = new System.Drawing.Point(857, 163);
+            this.cityTXT.Name = "cityTXT";
+            this.cityTXT.Size = new System.Drawing.Size(202, 22);
+            this.cityTXT.TabIndex = 1;
+            // 
+            // streetTXT
+            // 
+            this.streetTXT.Location = new System.Drawing.Point(857, 119);
+            this.streetTXT.Name = "streetTXT";
+            this.streetTXT.Size = new System.Drawing.Size(202, 22);
+            this.streetTXT.TabIndex = 1;
+            // 
+            // shippingTXT
+            // 
+            this.shippingTXT.Location = new System.Drawing.Point(1533, 21);
+            this.shippingTXT.Name = "shippingTXT";
+            this.shippingTXT.Size = new System.Drawing.Size(202, 22);
+            this.shippingTXT.TabIndex = 1;
+            // 
+            // orderStatusTXT
+            // 
+            this.orderStatusTXT.Location = new System.Drawing.Point(1189, 166);
+            this.orderStatusTXT.Name = "orderStatusTXT";
+            this.orderStatusTXT.Size = new System.Drawing.Size(202, 22);
+            this.orderStatusTXT.TabIndex = 1;
+            // 
+            // sessionIDTXT
+            // 
+            this.sessionIDTXT.Location = new System.Drawing.Point(1189, 116);
+            this.sessionIDTXT.Name = "sessionIDTXT";
+            this.sessionIDTXT.Size = new System.Drawing.Size(202, 22);
+            this.sessionIDTXT.TabIndex = 1;
+            // 
+            // nameTXT
+            // 
+            this.nameTXT.Location = new System.Drawing.Point(1189, 66);
+            this.nameTXT.Name = "nameTXT";
+            this.nameTXT.Size = new System.Drawing.Size(202, 22);
+            this.nameTXT.TabIndex = 1;
+            // 
+            // provinceTXT
+            // 
+            this.provinceTXT.Location = new System.Drawing.Point(1189, 21);
+            this.provinceTXT.Name = "provinceTXT";
+            this.provinceTXT.Size = new System.Drawing.Size(202, 22);
+            this.provinceTXT.TabIndex = 1;
+            // 
+            // paymentltentIdTXT
+            // 
+            this.paymentltentIdTXT.Location = new System.Drawing.Point(857, 21);
+            this.paymentltentIdTXT.Name = "paymentltentIdTXT";
+            this.paymentltentIdTXT.Size = new System.Drawing.Size(202, 22);
+            this.paymentltentIdTXT.TabIndex = 1;
+            // 
+            // phoneTXT
+            // 
+            this.phoneTXT.Location = new System.Drawing.Point(857, 66);
+            this.phoneTXT.Name = "phoneTXT";
+            this.phoneTXT.Size = new System.Drawing.Size(202, 22);
+            this.phoneTXT.TabIndex = 1;
+            // 
+            // paymentTypeTXT
+            // 
+            this.paymentTypeTXT.Location = new System.Drawing.Point(504, 22);
+            this.paymentTypeTXT.Name = "paymentTypeTXT";
+            this.paymentTypeTXT.Size = new System.Drawing.Size(202, 22);
+            this.paymentTypeTXT.TabIndex = 1;
+            // 
+            // paymentDateTXT
+            // 
+            this.paymentDateTXT.Location = new System.Drawing.Point(504, 66);
+            this.paymentDateTXT.Name = "paymentDateTXT";
+            this.paymentDateTXT.Size = new System.Drawing.Size(202, 22);
+            this.paymentDateTXT.TabIndex = 1;
+            // 
+            // idTXT
+            // 
+            this.idTXT.Location = new System.Drawing.Point(130, 25);
+            this.idTXT.Name = "idTXT";
+            this.idTXT.Size = new System.Drawing.Size(202, 22);
+            this.idTXT.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 172);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "OrderTotal";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "OrderCreate";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ApplicationUserId";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(381, 119);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "PaymentDueDate";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(381, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "PaymentDate";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(381, 172);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "PaymentStatus";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(381, 31);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(91, 16);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "paymentType";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1445, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 16);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "ShippingDate";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(1111, 122);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "SessionId";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1111, 72);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 16);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1111, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Province";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(757, 169);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(29, 16);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "City";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(757, 122);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "StreetAdress";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(757, 69);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 16);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "PhoneNumber";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(756, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "PaymentItentId";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1111, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "orderStatus";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Id";
+            // 
+            // btnPrintAll
+            // 
+            this.btnPrintAll.Location = new System.Drawing.Point(497, 18);
+            this.btnPrintAll.Name = "btnPrintAll";
+            this.btnPrintAll.Size = new System.Drawing.Size(75, 23);
+            this.btnPrintAll.TabIndex = 133;
+            this.btnPrintAll.Text = "Print All";
+            this.btnPrintAll.UseVisualStyleBackColor = true;
+            this.btnPrintAll.Click += new System.EventHandler(this.btnPrintAll_Click);
             // 
             // GoodsDelivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 723);
+            this.ClientSize = new System.Drawing.Size(1765, 723);
+            this.Controls.Add(this.grp1);
             this.Controls.Add(this.grd);
             this.Controls.Add(this.grb2);
-            this.Controls.Add(this.grb1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GoodsDelivery";
             this.Text = "GoodsDelivery";
             this.Load += new System.EventHandler(this.GoodsDelivery_Load);
-            this.grb1.ResumeLayout(false);
-            this.grb1.PerformLayout();
             this.grb2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
+            this.grp1.ResumeLayout(false);
+            this.grp1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox grb1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label fdsà;
-        private System.Windows.Forms.DateTimePicker dtp;
-        private System.Windows.Forms.TextBox txtProduct;
-        private System.Windows.Forms.TextBox txtAgent;
-        private System.Windows.Forms.TextBox txtDeli;
-        private System.Windows.Forms.TextBox txtPayment;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtQuality;
-        private System.Windows.Forms.TextBox txtgoods;
+        private System.Windows.Forms.GroupBox grb2;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridView grd;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.GroupBox grp1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox grb2;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnTrans;
-        private System.Windows.Forms.DataGridView grd;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtOrder;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbCity;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox orderTotalTXT;
+        private System.Windows.Forms.TextBox orderCreateTXT;
+        private System.Windows.Forms.TextBox userTXT;
+        private System.Windows.Forms.TextBox paymentStatusTXT;
+        private System.Windows.Forms.TextBox paymentDueDateTXT;
+        private System.Windows.Forms.TextBox cityTXT;
+        private System.Windows.Forms.TextBox streetTXT;
+        private System.Windows.Forms.TextBox shippingTXT;
+        private System.Windows.Forms.TextBox orderStatusTXT;
+        private System.Windows.Forms.TextBox sessionIDTXT;
+        private System.Windows.Forms.TextBox nameTXT;
+        private System.Windows.Forms.TextBox provinceTXT;
+        private System.Windows.Forms.TextBox paymentltentIdTXT;
+        private System.Windows.Forms.TextBox phoneTXT;
+        private System.Windows.Forms.TextBox paymentTypeTXT;
+        private System.Windows.Forms.TextBox paymentDateTXT;
+        private System.Windows.Forms.TextBox idTXT;
+        private System.Windows.Forms.Button btnPrintAll;
     }
 }

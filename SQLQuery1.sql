@@ -3,10 +3,10 @@ create table goods(
 	ID varchar(10),
 	nameG varchar(100),
 	dateRe date,
-	supplier varchar(10),
-	price int,
+	supplier varchar(50),
 	quantity int,
-	brand varchar(20)
+	brand varchar(20),
+	price varchar(50)
 )
 
 create table delivery(
@@ -43,3 +43,4 @@ alter table delivery
 alter column paymentStatus varchar(50);
  
  drop table delivery;
+ drop table goods;

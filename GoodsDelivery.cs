@@ -35,7 +35,7 @@ namespace Log_in
 
         public void showGRD()
         {
-            string sql = "select * from delivery";
+            string sql = "select * from Orders";
             data = new SqlDataAdapter(sql, cn);
             tb = new DataTable();
             data.Fill(tb);
@@ -45,13 +45,15 @@ namespace Log_in
         public void formload()
         {
             showGRD();
-            enable(grb1, false);
+            enable(grp1, false);
+            btnSave.Enabled = false;
+            btnPrint.Enabled = false;
             dk = 0;
         }
 
         private void GoodsDelivery_Load(object sender, EventArgs e)
         {
-            string con = "initial catalog = goodsReceived; data source = LAPTOP-RAHH94CV; integrated security = true";
+            string con = "Server=tcp:anne.database.windows.net,1433;Initial Catalog=Final_project;Persist Security Info=False;User ID=ninhdong;Password=8FtLt4P#$HL9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             cn = new SqlConnection(con);
             cn.Open();
             formload();
@@ -59,194 +61,135 @@ namespace Log_in
 
         private void grd_Click(object sender, EventArgs e)
         {
-            txtDeli.Text = grd.CurrentRow.Cells[0].Value.ToString();
-            dtp.Text = grd.CurrentRow.Cells[1].Value.ToString();
-            txtAgent.Text = grd.CurrentRow.Cells[2].Value.ToString();
-            txtProduct.Text = grd.CurrentRow.Cells[3].Value.ToString();
-            txtPhone.Text = grd.CurrentRow.Cells[4].Value.ToString();
-            txtAddress.Text = grd.CurrentRow.Cells[5].Value.ToString();
-            cbCity.Text = grd.CurrentRow.Cells[6].Value.ToString();
-            txtQuality.Text = grd.CurrentRow.Cells[7].Value.ToString();
-            txtgoods.Text = grd.CurrentRow.Cells[8].Value.ToString();
-            comboBox1.Text = grd.CurrentRow.Cells[9].Value.ToString();
-            txtPayment.Text = grd.CurrentRow.Cells[10].Value.ToString();
-            txtOrder.Text = grd.CurrentRow.Cells[11].Value.ToString();
-            txtPrice.Text = grd.CurrentRow.Cells[12].Value.ToString();
+            idTXT.Text = grd.CurrentRow.Cells[0].Value.ToString();
+            userTXT.Text = grd.CurrentRow.Cells[1].Value.ToString();
+            orderCreateTXT.Text = grd.CurrentRow.Cells[2].Value.ToString();
+            shippingTXT.Text = grd.CurrentRow.Cells[3].Value.ToString();
+            orderTotalTXT.Text = grd.CurrentRow.Cells[4].Value.ToString();
+            orderStatusTXT.Text = grd.CurrentRow.Cells[5].Value.ToString();
+            paymentStatusTXT.Text = grd.CurrentRow.Cells[6].Value.ToString();
+            paymentDateTXT.Text = grd.CurrentRow.Cells[7].Value.ToString();
+            paymentDueDateTXT.Text = grd.CurrentRow.Cells[8].Value.ToString();
+            paymentltentIdTXT.Text = grd.CurrentRow.Cells[9].Value.ToString();
+            phoneTXT.Text = grd.CurrentRow.Cells[10].Value.ToString();
+            streetTXT.Text = grd.CurrentRow.Cells[11].Value.ToString();
+            cityTXT.Text = grd.CurrentRow.Cells[12].Value.ToString();
+            provinceTXT.Text = grd.CurrentRow.Cells[13].Value.ToString();
+            nameTXT.Text = grd.CurrentRow.Cells[14].Value.ToString();
+            sessionIDTXT.Text = grd.CurrentRow.Cells[15].Value.ToString();
+            paymentTypeTXT.Text = grd.CurrentRow.Cells[16].Value.ToString();
 
             btnUpdate.Enabled = true;
             btnPrint.Enabled = true;
             btnSave.Enabled = true;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            enable(grb1, true);
-            txtDeli.Text = "";
-            txtAgent.Text = "";
-            txtProduct.Text = "";
-            txtgoods.Text = "Not transfer";
-            txtPayment.Text = "Not complete";
-            txtPrice.Text = "";
-            txtQuality.Text = "";
-            txtPhone.Text = "";
-            txtAddress.Text = "";
-            txtOrder.Text = "Not successful";
+       
 
-
-            dtp.Focus();
-            txtDeli.Text = auto();
-            txtAgent.Text = auto1();
-            txtProduct.Text = auto2();
-            txtDeli.Enabled = false;
-            txtAgent.Enabled = false;
-            txtProduct.Enabled = false;
-            txtgoods.Enabled = false;
-            txtPayment.Enabled = false;
-            txtOrder.Enabled = false;
-            dk = 1;
-        }
-
-        public string auto()
-        {
-            int count = 0;
-            count = grd.Rows.Count;
-            string s = "";
-            int s1 = 0;
-            s = Convert.ToString(grd.Rows[count - 2].Cells[0].Value);
-            s1 = Convert.ToInt32((s.Remove(0, 1)));
-            if (s1 + 1 < 10)
-            {
-                txtDeli.Text = "D0" + (s1 + 1).ToString();
-
-            }
-            else if (s1 + 1 < 100)
-            {
-                txtDeli.Text = "G" + (s1 + 1).ToString();
-            }
-            return txtDeli.Text;
-        }
-
-        public string auto1()
-        {
-            int count = 0;
-            count = grd.Rows.Count;
-            string s = "";
-            int s1 = 0;
-            s = Convert.ToString(grd.Rows[count - 2].Cells[0].Value);
-            s1 = Convert.ToInt32((s.Remove(0, 1)));
-            if (s1 + 1 < 10)
-            {
-                txtAgent.Text = "E0" + (s1 + 1).ToString();
-
-            }
-            else if (s1 + 1 < 100)
-            {
-                txtAgent.Text = "E" + (s1 + 1).ToString();
-            }
-            return txtAgent.Text;
-        }
-
-        public string auto2()
-        {
-            int count = 0;
-            count = grd.Rows.Count;
-            string s = "";
-            int s1 = 0;
-            s = Convert.ToString(grd.Rows[count - 2].Cells[0].Value);
-            s1 = Convert.ToInt32((s.Remove(0, 1)));
-            if (s1 + 1 < 10)
-            {
-                txtProduct.Text = "G0" + (s1 + 1).ToString();
-
-            }
-            else if (s1 + 1 < 100)
-            {
-                txtProduct.Text = "G" + (s1 + 1).ToString();
-            }
-            return txtProduct.Text;
-        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             string sql = "";
-            if (dk == 1)//Add
-            {
-                //check primary key
-                sql = "select * from delivery where deliveryID = '" + txtDeli.Text + "'";
-                data = new SqlDataAdapter(sql, cn);
-                tb = new DataTable();
-                data.Fill(tb);
-                if (tb.Rows.Count > 0)
-                {
-                    MessageBox.Show("Exists");
-                    txtDeli.Focus();
-                    return;
-                }
-                //Insert into
-                sql = "insert into delivery values('"+txtDeli.Text+"','"+ dtp.Value.ToShortDateString() + "','"+txtAgent.Text+"','"+txtProduct.Text+"','"+txtPhone.Text+"','"+txtAddress.Text+"','"+cbCity.Text+"',"+txtQuality.Text+",'"+txtgoods.Text+"','"+comboBox1.Text+"','"+txtPayment.Text+"','"+txtOrder.Text+"',"+txtPrice.Text+")";
-                cm = new SqlCommand(sql, cn);
-                cm.ExecuteNonQuery();
-            }
-            formload();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string sql = "";
-            if (txtPayment.Text == "Complete")
-            {
-                MessageBox.Show("The agent has already paid");
-                return;
-            }
-            else if(comboBox1.Text == "By Cash")
-            {
-                MessageBox.Show("The agent will pay by cashing");
-                return;
-            }
-            else
-            {
-                if (MessageBox.Show("Are you sure that the agent has paid the invoice?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    sql = "update delivery set deliveryDate = '" + dtp.Value.ToShortDateString() + "', agentID = '" + txtAgent.Text + "', productID = '" + txtProduct.Text + "', phoneNumber ='" + txtPhone.Text + "', streetAddress = '" + txtAddress.Text + "',city = '" + cbCity.Text + "', quantity = " + txtQuality.Text + ", status = 'Not transfer', paymentMethods = '" + comboBox1.Text + "', paymentStatus = 'Complete', orderStatus = '" + txtOrder.Text + "', price = " + txtPrice.Text + " where deliveryID = '" + txtDeli.Text + "'";
-                    cm = new SqlCommand(sql, cn);
-                    cm.ExecuteNonQuery();
-                }
-            }
-            formload();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            string sql = "delete from delivery where deliveryID = '" + txtDeli.Text + "'";
+            sql = "update Orders set ApplicationUserId = '" + userTXT.Text + "', OrderCreate = '" + orderCreateTXT.Text + "', ShippingDate = '" + shippingTXT.Text + "', OrderTotal = '" + orderTotalTXT.Text + "', orderStatus = '"+orderStatusTXT.Text+ "',PaymentStatus = '" + paymentStatusTXT.Text + "', PaymentDate ='" + paymentDateTXT.Text + "', PaymentDueDate = '" + paymentDueDateTXT.Text + "', PaymentItentId ='" + paymentltentIdTXT.Text + "', PhoneNumber='"+phoneTXT.Text+ "',StreetAdress= '"+streetTXT.Text+ "', City='"+cityTXT.Text+ "', Province= '"+provinceTXT.Text+ "', Name='"+nameTXT.Text+ "', SessionId='"+sessionIDTXT.Text+ "', paymentType='"+paymentTypeTXT.Text+"' where id = '" + idTXT.Text + "'";
             cm = new SqlCommand(sql, cn);
             cm.ExecuteNonQuery();
             formload();
         }
 
-        private void btnTrans_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string sql = "";
-            if (txtPayment.Text == "Complete")
-            {
-                sql = "update delivery set deliveryDate = '" + dtp.Value.ToShortDateString() + "', agentID = '" + txtAgent.Text + "', productID = '" + txtProduct.Text + "',phoneNumber ='" + txtPhone.Text + "', streetAddress = '" + txtAddress.Text + "',city = '" + cbCity.Text + "', quantity = " + txtQuality.Text + ", status = 'Being transfered', paymentMethods = '" + comboBox1.Text + "', paymentStatus = 'Complete', orderStatus = 'Successful', price = " + txtPrice.Text + " where deliveryID = '" + txtDeli.Text + "'";
-                cm = new SqlCommand(sql, cn);
-                cm.ExecuteNonQuery();
-                MessageBox.Show("Your products have been transfered");
-            }
-            else if(comboBox1.Text == "By Cash")
-            {
-                sql = "update delivery set deliveryDate = '" + dtp.Value.ToShortDateString() + "', agentID = '" + txtAgent.Text + "', productID = '" + txtProduct.Text + "',phoneNumber ='" + txtPhone.Text + "', streetAddress = '" + txtAddress.Text + "',city = '" + cbCity.Text + "', quantity = " + txtQuality.Text + ", status = 'Being transfered', paymentMethods = '" + comboBox1.Text + "', paymentStatus = 'Not complete', orderStatus = 'Successful', price = " + txtPrice.Text + " where deliveryID = '" + txtDeli.Text + "'";
-                cm = new SqlCommand(sql, cn);
-                cm.ExecuteNonQuery();
-            }
-            else
-            {
-                MessageBox.Show("The agent has not paid");
-                return;
-            }
-            formload();
+            enable(grp1, true);
+            idTXT.Enabled = false;
+            userTXT.Enabled = false;
+            orderCreateTXT.Enabled = false;
+            orderStatusTXT.Enabled = false;
+            orderTotalTXT.Enabled = false;
+            paymentTypeTXT.Enabled = false;
+            paymentStatusTXT.Enabled = false;
+            paymentltentIdTXT.Enabled = false;
+            paymentDateTXT.Enabled = false;
+            paymentDueDateTXT.Enabled = false;
+            paymentltentIdTXT.Enabled=false;
+            sessionIDTXT.Enabled = false;
+            btnSave.Enabled = true;
+            
         }
 
+        
+
         private void btnPrint_Click(object sender, EventArgs e)
+        {
+            btnPrint.Enabled = true;
+            //Create a new SaveFileDialog
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            //Set the file name filter
+            saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
+
+            //Show the SaveFileDialog
+            DialogResult result = saveFileDialog.ShowDialog();
+
+            //If the user clicks the Save button, export the DataGridView to PDF
+            if (result == DialogResult.OK)
+            {
+                //Create a new PDF document
+                Document document = new Document();
+
+                //Create a new PDF writer
+                PdfWriter.GetInstance(document, new FileStream(saveFileDialog.FileName, FileMode.Create));
+
+                //Open the document
+                document.Open();
+
+                //Create a new table with the number of columns required
+                PdfPTable table = new PdfPTable(8);
+
+                //Add the column headers to the table
+                table.AddCell("ID");
+                table.AddCell("NAME");
+                table.AddCell("PROVINCE");
+                table.AddCell("CITY");
+                table.AddCell("STREET ADDRESS");
+                table.AddCell("PHONE NUMBER");
+                table.AddCell("PAYMENT TYPE");
+                table.AddCell("ORDER TOTAL");
+
+                //Loop through the rows of the DataGridView
+
+                //Create a new table row
+                for(int i = 0; i < grd.Rows.Count - 1; i++)
+                {
+                    table.AddCell(grd.Rows[i].Cells[0].Value.ToString());
+                    table.AddCell(grd.Rows[i].Cells[14].Value.ToString());
+                    table.AddCell(grd.Rows[i].Cells[13].Value.ToString());
+                    table.AddCell(grd.Rows[i].Cells[12].Value.ToString());
+                    table.AddCell(grd.Rows[i].Cells[11].Value.ToString());
+                    table.AddCell(grd.Rows[i].Cells[10].Value.ToString());
+                    table.AddCell(grd.Rows[i].Cells[16].Value.ToString());
+                    table.AddCell(grd.Rows[i].Cells[4].Value.ToString());
+                }
+                    
+                
+                
+
+                //Add the table to the PDF document
+                document.Add(table);
+
+                //Close the document
+                document.Close();
+
+                MessageBox.Show("PDF file saved successfully!");
+            }
+        }
+            
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Menu mn = new Menu();
+            mn.Show();
+            this.Hide();
+        }
+
+        private void btnPrintAll_Click(object sender, EventArgs e)
         {
             if (grd.Rows.Count - 1 > 0)
             {
@@ -327,12 +270,5 @@ namespace Log_in
                 MessageBox.Show("No Record To Export !!!", "Info");
             }
         }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Menu mn = new Menu();
-            mn.Show();
-            this.Hide();
-        }
     }
- }
+}

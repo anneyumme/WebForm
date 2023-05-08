@@ -30,7 +30,7 @@ namespace Log_in
 
         public void showGRD()
         {
-            string sql = "select * from goods";
+            string sql = "select * from Products";
             data = new SqlDataAdapter(sql, cn);
             tb = new DataTable();
             data.Fill(tb);
@@ -51,7 +51,7 @@ namespace Log_in
 
         private void GoodsReceived_Load(object sender, EventArgs e)
         {
-            string con = "initial catalog = goodsReceived; data source = LAPTOP-RAHH94CV; integrated security = true";
+            string con = "Server=tcp:anne.database.windows.net,1433;Initial Catalog=Final_project;Persist Security Info=False;User ID=ninhdong;Password=8FtLt4P#$HL9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             cn = new SqlConnection(con);
             cn.Open();
             formload();
@@ -61,35 +61,22 @@ namespace Log_in
         {
             enable(grb1, true);
             idTXT.Text = "";
-            slTXT.Text = "";
+            modelTXT.Text = "";
             nameTXT.Text = "";
             priceTXT.Text = "";
-            spTXT.Text = "";
-       
+            desTXT.Text = "";
+            brandTXT.Text = "";
+            imageTXT.Text = "";
+            yearTXT.Text = "";
+            price100TXT.Text = "";
+            price50TXT.Text = "";
 
+            idTXT.Enabled= false;
+            imageTXT.Enabled= false;
             nameTXT.Focus();
             saveBtn.Enabled = true;
-            idTXT.Enabled = false;
-            idTXT.Text = auto();
+       
             dk = 1;
-        }
-        public string auto()
-        {
-            int count = 0;
-            count = grd.Rows.Count;
-            string s = "";
-            int s1 = 0;
-            s = Convert.ToString(grd.Rows[count - 2].Cells[0].Value);
-            s1 = Convert.ToInt32((s.Remove(0, 1)));
-            if (s1 + 1 < 10)
-            {
-                idTXT.Text = "G0" + (s1 + 1).ToString();
-
-            }
-            else if (s1 + 1 < 100) {
-                idTXT.Text = "G" + (s1 + 1).ToString();
-            }
-            return idTXT.Text;
         }
 
         private void grd_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -100,12 +87,16 @@ namespace Log_in
         private void grd_Click(object sender, EventArgs e)
         {
             idTXT.Text = grd.CurrentRow.Cells[0].Value.ToString();
-            nameTXT.Text = grd.CurrentRow.Cells[1].Value.ToString();
-            dtp.Text = grd.CurrentRow.Cells[2].Value.ToString();
-            spTXT.Text = grd.CurrentRow.Cells[3].Value.ToString();
-            priceTXT.Text = grd.CurrentRow.Cells[6].Value.ToString();
-            slTXT.Text = grd.CurrentRow.Cells[4].Value.ToString();
-            TXTBrand.Text = grd.CurrentRow.Cells[5].Value.ToString();
+            modelTXT.Text = grd.CurrentRow.Cells[1].Value.ToString();
+            desTXT.Text = grd.CurrentRow.Cells[2].Value.ToString();
+            price50TXT.Text = grd.CurrentRow.Cells[3].Value.ToString();
+            nameTXT.Text = grd.CurrentRow.Cells[4].Value.ToString();
+            brandTXT.Text = grd.CurrentRow.Cells[5].Value.ToString();
+            imageTXT.Text = grd.CurrentRow.Cells[6].Value.ToString();
+            yearTXT.Text = grd.CurrentRow.Cells[7].Value.ToString();
+            price100TXT.Text = grd.CurrentRow.Cells[8].Value.ToString();
+            price50TXT.Text = grd.CurrentRow.Cells[9].Value.ToString();
+
             deleteBtn.Enabled = true;
             editBtn.Enabled = true;
         }
@@ -114,8 +105,9 @@ namespace Log_in
         {
             enable(grb1, true);
             idTXT.Enabled = false;
-            dtp.Enabled = false;
-            slTXT.Focus();
+            brandTXT.Enabled = false;
+            imageTXT.Enabled= false;
+            nameTXT.Focus();
             saveBtn.Enabled = true;
 
             dk = 2;
@@ -125,7 +117,7 @@ namespace Log_in
         {
             if (MessageBox.Show("Do you want to delete?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string sql = "delete from goods where ID = '" + idTXT.Text + "'";
+                string sql = "delete from Products where id = '" + idTXT.Text + "'";
                 cm = new SqlCommand(sql, cn);
                 cm.ExecuteNonQuery();
                 formload();
@@ -138,7 +130,7 @@ namespace Log_in
             if (dk == 1)//Add
             {
                 //check primary key
-                sql = "select * from goods where ID = '" + idTXT.Text + "'";
+                sql = "select * from Products where id = '" + idTXT.Text + "'";
                 data = new SqlDataAdapter(sql, cn);
                 tb = new DataTable();
                 data.Fill(tb);
@@ -149,16 +141,48 @@ namespace Log_in
                     return;
                 }
                 //Insert into
-                sql = "insert into goods values ('" + idTXT.Text + "','" + nameTXT.Text + "','" + dtp.Value.ToShortDateString() + "', '" + spTXT.Text + "', " + slTXT.Text + ", '" + TXTBrand.Text + "','"+priceTXT.Text+"')";
-                cm = new SqlCommand(sql, cn);
-                cm.ExecuteNonQuery();
+                if (brandTXT.Text == "Samsung")
+                {
+
+                    sql = "insert into Products (model,description,price,name,brandId,year,price100,price50) values ('" + modelTXT.Text + "','" + desTXT.Text + "', '" + priceTXT.Text + "', '" + nameTXT.Text + "', '10','" + yearTXT.Text + "','" + price100TXT.Text + "','" + price50TXT.Text + "')";
+                    cm = new SqlCommand(sql, cn);
+                    cm.ExecuteNonQuery();
+                }
+                else if (brandTXT.Text == "Xiaomi")
+                {
+                    sql = "insert into Products (model,description,price,name,brandId,year,price100,price50) values ('" + modelTXT.Text + "','" + desTXT.Text + "', '" + priceTXT.Text + "', '" + nameTXT.Text + "', '11','" + yearTXT.Text + "','" + price100TXT.Text + "','" + price50TXT.Text + "')";
+                    cm = new SqlCommand(sql, cn);
+                    cm.ExecuteNonQuery();
+                }
+                else
+                {
+                    sql = "insert into Products (model,description,price,name,brandId,year,price100,price50) values ('" + modelTXT.Text + "','" + desTXT.Text + "', '" + priceTXT.Text + "', '" + nameTXT.Text + "', '12','" + yearTXT.Text + "','" + price100TXT.Text + "','" + price50TXT.Text + "')";
+                    cm = new SqlCommand(sql, cn);
+                    cm.ExecuteNonQuery();
+                }
+                
             }
             else //dk =2
             {
                 //Update
-                sql = "update goods set nameG = '" + nameTXT.Text + "', dateRe = '" + dtp.Value.ToShortDateString() + "', supplier = '" + spTXT.Text + "', quantity = " + slTXT.Text + ", brand = '" + TXTBrand.Text + "',price = '"+priceTXT.Text+"' where ID = '" + idTXT.Text + "'";
-                cm = new SqlCommand(sql, cn);
-                cm.ExecuteNonQuery();
+                if (brandTXT.Text == "Samsung")
+                {
+                    sql = "update Products set model = '" + modelTXT.Text + "', description = '" + desTXT.Text + "', price = '" + priceTXT.Text + "', name = '" + nameTXT.Text + "', brandId = '10',imageUrl = '" + imageTXT.Text + "', year ='" + yearTXT.Text + "', price100 = '" + price100TXT.Text + "', price50 ='" + price50TXT.Text + "' where id = '" + idTXT.Text + "'";
+                    cm = new SqlCommand(sql, cn);
+                    cm.ExecuteNonQuery();
+                }
+                else if (brandTXT.Text == "Xiaomi")
+                {
+                    sql = "update Products set model = '" + modelTXT.Text + "', description = '" + desTXT.Text + "', price = '" + priceTXT.Text + "', name = '" + nameTXT.Text + "', brandId = '11',imageUrl = '" + imageTXT.Text + "', year ='" + yearTXT.Text + "', price100 = '" + price100TXT.Text + "', price50 ='" + price50TXT.Text + "' where id = '" + idTXT.Text + "'";
+                    cm = new SqlCommand(sql, cn);
+                    cm.ExecuteNonQuery();
+                }
+                else
+                {
+                    sql = "update Products set model = '" + modelTXT.Text + "', description = '" + desTXT.Text + "', price = '" + priceTXT.Text + "', name = '" + nameTXT.Text + "', brandId = '12',imageUrl = '" + imageTXT.Text + "', year ='" + yearTXT.Text + "', price100 = '" + price100TXT.Text + "', price50 ='" + price50TXT.Text + "' where id = '" + idTXT.Text + "'";
+                    cm = new SqlCommand(sql, cn);
+                    cm.ExecuteNonQuery();
+                }
             }
             formload();
             addBtn.Focus();
