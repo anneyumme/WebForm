@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E1j8qFz8j0P8OP/GcQ9s8jmIGYJPIe2SuOB9gD3rROg=",
+  "Hash": "S9YdppmXgnnWC9iyCQRNADjUyi3umZ2W/ozzicIxr8Q=",
   "Source": "WebForm_final",
   "BasePath": "_content/WebForm_final",
   "Mode": "Default",
@@ -1173,6 +1173,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Product\\7b59fb70-037f-4465-a936-8d42ff6d5e82.jpg"
     },
     {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\9eeafa13-ca36-4a18-afc9-3f34adfce1a2.jpg",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "Images/Product/9eeafa13-ca36-4a18-afc9-3f34adfce1a2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Product\\9eeafa13-ca36-4a18-afc9-3f34adfce1a2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\a1d93498-786b-44af-82bb-67f37ca5d27f.jpg",
       "SourceId": "WebForm_final",
       "SourceType": "Discovered",
@@ -1239,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Product\\d41e2953-0235-4359-8fba-9491ce51ec7f.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\da751d0a-0c0e-4f67-ac4f-35b0d436af98.jpg",
+      "SourceId": "WebForm_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\",
+      "BasePath": "_content/WebForm_final",
+      "RelativePath": "Images/Product/da751d0a-0c0e-4f67-ac4f-35b0d436af98.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Product\\da751d0a-0c0e-4f67-ac4f-35b0d436af98.jpg"
     },
     {
       "Identity": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\wwwroot\\Images\\Product\\default.jpg",
