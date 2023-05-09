@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Stripe.Checkout;
 using System.Security.Claims;
@@ -17,11 +18,13 @@ namespace WebForm_final.Areas.Customer.Controllers
 	{
 
 		private readonly IUnitOfWork _unitOfWork;
+		private readonly IEmailSender _emailSender;
 		[BindProperty]  //bind all the property shoppingCartVM variable with the view when submit
 		public ShoppingCartViewModel shoppingCartVM { get; set; }
-		public CartController(IUnitOfWork unitOfWork)
+		public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender)
 		{
 			_unitOfWork = unitOfWork;
+			_emailSender = emailSender;
 
 		}
 		public IActionResult Index()
@@ -210,6 +213,7 @@ namespace WebForm_final.Areas.Customer.Controllers
                 _unitOfWork.Order.UpdateStatus(id, Global.Status_approved, Global.Payment_NotPaid);
                 _unitOfWork.Order.save();
             }
+			_emailSender.SendEmailAsync(order.ApplicationUser.Email, "Notification: New Order", $"New Order Created - {order.Id}");
 			List<ShoppingCart> shoppingCarts = _unitOfWork.ShoppingCart.GetAll(u=> u.ApplicationUserId == order.ApplicationUserId).ToList();
 			_unitOfWork.ShoppingCart.removeRange(shoppingCarts);
 			_unitOfWork.ShoppingCart.save();

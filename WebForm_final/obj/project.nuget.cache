@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "noDn2CLXVrmKdJfm18CcYBbe+ahIp0bAEghH9orM4H/ubEnU6H52fbEb+23QXBDXEQmJ0uhSjkgWU3XajF0+EQ==",
+  "dgSpecHash": "jxys9ux8fux68F2Z0Yek1JV88LgHbvyuqBU36yn75bBkQxm+bW1HcZhPdu7jkCphrlol17Efho0QdIBchZHRcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ninhd\\Desktop\\Final Essay\\WebForm\\WebForm_final\\WebForm_final.csproj",
   "expectedPackageFiles": [
@@ -143,6 +143,8 @@
     "C:\\Users\\ninhd\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\ninhd\\.nuget\\packages\\sendgrid\\9.28.1\\sendgrid.9.28.1.nupkg.sha512",
+    "C:\\Users\\ninhd\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\stripe.net\\41.14.0\\stripe.net.41.14.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\ninhd\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
